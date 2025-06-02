@@ -1,8 +1,25 @@
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, send_from_directory, jsonify
 import subprocess
 import os
+import requests  # Assurez-vous d'avoir installé la bibliothèque requests
 
 app = Flask(__name__)
+
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")  # Mets ta clé dans une variable d'environnement
+
+@app.route('/api/openai', methods=['POST'])
+def openai_proxy():
+    data = request.get_json()
+    response = requests.post(
+        "https://api.openai.com/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {OPENAI_API_KEY}",
+            "Content-Type": "application/json"
+        },
+        json=data
+    )
+    return jsonify(response.json()), response.status_code
+
 
 @app.route('/update_csv', methods=['POST'])
 def update_csv():

@@ -845,7 +845,6 @@
 <!-- ...existing code... -->
 
 <script>
-const OPENAI_API_KEY = "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";
 
 
 // Sauvegarde le site web de la société dans le localStorage
@@ -964,29 +963,21 @@ async function searchSimilarCompanies(companyWebsite) {
         Do NOT use fake names like "Company A" or "Company B". Only use real existing companies that could be potential clients. Respond in English.
         Make sure that there are at least 30 companies in the response, and that all columns are filled with real data from the companies' official websites.`;
         // Appel pour le tableau
-        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        // ...existing code...
+        const response = await fetch("/api/openai", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${OPENAI_API_KEY}`,
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 model: "gpt-4-turbo",
                 messages: [
-                    {
-                        role: "system",
-                        content: "You are an assistant that helps find similar companies.",
-                    },
-                    {
-                        role: "user",
-                        content: userMessage,
-                    },
+                    { role: "system", content: "You are an assistant that helps find similar companies." },
+                    { role: "user", content: userMessage }
                 ],
                 max_tokens: 4096,
-                temperature: 0.7,
-            }),
+                temperature: 0.7
+            })
         });
-
+// ...existing code...
         if (!response.ok) {
             let errorDetails = {};
             try {
@@ -1114,12 +1105,9 @@ async function searchSimilarCompanies(companyWebsite) {
             (context ? context + "\n\n" : "") +
             `Based on the context and the company website "${companyWebsite}", give 3 short and actionable advices in English about which companies to contact first and which have the highest chance of becoming clients. Only output the advices as a numbered list.`;
 
-        const adviceResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+        const adviceResponse = await fetch("/api/openai", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${OPENAI_API_KEY}`,
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 model: "gpt-4-turbo",
                 messages: [
