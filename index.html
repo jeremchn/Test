@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-width="fullwidth" data-menu-styles="light" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> ZYNIX - Bootstrap 5 Premium Admin & Dashboard Template </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Wcsrm Software Private Limited">
+	<meta name="keywords" content="bootstrap template, admin panel bootstrap, bootstrap dashboard, admin, admin dashboard template, dashboard template, html css templates, dashboard, template dashboard,  bootstrap dashboard template, dashboard html css, bootstrap admin dashboard,  bootstrap admin, dashboard template, bootstrap5 admin template">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+    <!-- Main Theme Js -->
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="../assets/css/styles.css" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet" > 
+
+    <!-- Simplebar Css -->
+    <link href="../assets/libs/simplebar/simplebar.min.css" rel="stylesheet" >
+    
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- FlatPickr CSS -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+
+    <!-- Auto Complete CSS -->
+    <link rel="stylesheet" href="../assets/libs/@tarekraafat/autocomplete.js/css/autoComplete.css">
+
+<style>
+    /* Masque tous les cercles éventuels dans la liste des industries */
+    .top-categories .badge,
+    .top-categories .dot,
+    .top-categories .list-group-item .dot,
+    .top-categories .list-group-item .badge {
+        display: none !important;
+    }
+    /* Masque aussi les pseudo-éléments éventuels */
+    .top-categories .list-group-item::before,
+    .top-categories .fw-semibold::before {
+        display: none !important;
+        content: none !important;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Start Switcher -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header border-bottom d-block p-0">
+        <div class="d-flex align-items-center justify-content-between p-3">
+            <h5 class="offcanvas-title text-default" id="offcanvasRightLabel">Switcher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <nav class="border-top border-block-start-dashed">
+            <div class="nav nav-tabs nav-justified" id="switcher-main-tab" role="tablist">
+                <button class="nav-link active" id="switcher-home-tab" data-bs-toggle="tab" data-bs-target="#switcher-home"
+                    type="button" role="tab" aria-controls="switcher-home" aria-selected="true">Theme Styles</button>
+                <button class="nav-link" id="switcher-profile-tab" data-bs-toggle="tab" data-bs-target="#switcher-profile"
+                    type="button" role="tab" aria-controls="switcher-profile" aria-selected="false">Theme Colors</button>
+            </div>
+        </nav>
+    </div>
+    <div class="offcanvas-body">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active border-0" id="switcher-home" role="tabpanel" aria-labelledby="switcher-home-tab"
+                tabindex="0">
+                <div class="">
+                    <p class="switcher-style-head">Theme Color Mode:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-light-theme">
+                                    Light
+                                </label>
+                                <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-dark-theme">
+                                    Dark
+                                </label>
+                                <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Directions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-ltr">
+                                    LTR
+                                </label>
+                                <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-rtl">
+                                    RTL
+                                </label>
+                                <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Navigation Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-vertical">
+                                    Vertical
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-style" id="switcher-vertical"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-horizontal">
+                                    Horizontal
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-style"
+                                    id="switcher-horizontal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-menu-styles">
+                    <p class="switcher-style-head">Vertical & Horizontal Menu Styles:</p>
+                    <div class="row switcher-style gx-0 pb-2 gy-2">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-click">
+                                    Menu Click
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-menu-click">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-hover">
+                                    Menu Hover
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-menu-hover">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-click">
+                                    Icon Click
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-icon-click">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-hover">
+                                    Icon Hover
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-icon-hover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidemenu-layout-styles">
+                    <p class="switcher-style-head">Sidemenu Layout Styles:</p>
+                    <div class="row switcher-style gx-0 pb-2 gy-2">
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-default-menu">
+                                    Default Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-default-menu" checked>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-closed-menu">
+                                    Closed Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-closed-menu">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icontext-menu">
+                                    Icon Text
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-icontext-menu">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-overlay">
+                                    Icon Overlay
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-icon-overlay">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-detached">
+                                    Detached
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-detached">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-double-menu">
+                                    Double Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-double-menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Page Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-regular">
+                                    Regular
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-regular"
+                                checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-classic">
+                                    Classic
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-classic">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-modern">
+                                    Modern
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-modern">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Layout Width Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-default-width">
+                                    compact
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-default-width"
+                                   >
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-full-width">
+                                    Full Width
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-full-width"  checked>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-boxed">
+                                    Boxed
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-boxed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Menu Positions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-fixed">
+                                    Fixed
+                                </label>
+                                <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-fixed"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-scroll">
+                                    Scrollable
+                                </label>
+                                <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-scroll">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Header Positions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-header-fixed">
+                                    Fixed
+                                </label>
+                                <input class="form-check-input" type="radio" name="header-positions"
+                                    id="switcher-header-fixed" checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-header-scroll">
+                                    Scrollable
+                                </label>
+                                <input class="form-check-input" type="radio" name="header-positions"
+                                    id="switcher-header-scroll">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Loader:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-loader-enable">
+                                    Enable
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-loader"
+                                    id="switcher-loader-enable">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-loader-disable">
+                                    Disable
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-loader"
+                                    id="switcher-loader-disable" checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade border-0" id="switcher-profile" role="tabpanel" aria-labelledby="switcher-profile-tab" tabindex="0">
+                <div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Menu Colors:</p>
+                        <div class="d-flex switcher-style pb-2">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Light Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-light" checked>
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Dark Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-dark">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Color Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Gradient Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-gradient">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-transparent"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Transparent Menu"
+                                    type="radio" name="menu-colors" id="switcher-menu-transparent">
+                            </div>
+                        </div>
+                        <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Menu dynamically change from below Theme Primary color picker</div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Header Colors:</p>
+                        <div class="d-flex switcher-style pb-2">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Light Header" type="radio" name="header-colors"
+                                    id="switcher-header-light" checked>
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Dark Header" type="radio" name="header-colors"
+                                    id="switcher-header-dark">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Color Header" type="radio" name="header-colors"
+                                    id="switcher-header-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Gradient Header" type="radio" name="header-colors"
+                                    id="switcher-header-gradient">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-transparent" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Transparent Header" type="radio" name="header-colors"
+                                    id="switcher-header-transparent">
+                            </div>
+                        </div>
+                        <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Header dynamically change from below Theme Primary color picker</div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Theme Primary:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-1" type="radio"
+                                    name="theme-primary" id="switcher-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-2" type="radio"
+                                    name="theme-primary" id="switcher-primary1">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                                    id="switcher-primary2">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                                    id="switcher-primary3">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                                    id="switcher-primary4">
+                            </div>
+                            <div class="form-check switch-select ps-0 mt-1 color-primary-light">
+                                <div class="theme-container-primary"></div>
+                                <div class="pickr-container-primary"  onchange="updateChartColor(this.value)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Theme Background:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-1" type="radio"
+                                    name="theme-background" id="switcher-background">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-2" type="radio"
+                                    name="theme-background" id="switcher-background1">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-3" type="radio" name="theme-background"
+                                    id="switcher-background2">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-4" type="radio"
+                                    name="theme-background" id="switcher-background3">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-5" type="radio"
+                                    name="theme-background" id="switcher-background4">
+                            </div>
+                            <div class="form-check switch-select ps-0 mt-1 tooltip-static-demo color-bg-transparent">
+                                <div class="theme-container-background"></div>
+                                <div class="pickr-container-background"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-image mb-3">
+                        <p class="switcher-style-head">Menu With Background Image:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img1" type="radio"
+                                    name="menu-background" id="switcher-bg-img">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img2" type="radio"
+                                    name="menu-background" id="switcher-bg-img1">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img3" type="radio" name="menu-background"
+                                    id="switcher-bg-img2">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img4" type="radio"
+                                    name="menu-background" id="switcher-bg-img3">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img5" type="radio"
+                                    name="menu-background" id="switcher-bg-img4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block canvas-footer flex-wrap">
+                <a href="javascript:void(0);" id="reset-all" class="btn btn-danger m-1 w-100">Reset</a> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Switcher -->
+
+
+     <!-- Loader -->
+<div id="loader" >
+    <img src="../assets/images/media/loader.svg" alt="">
+</div>
+<!-- Loader -->
+
+    <div class="page">
+
+         <!-- Start::app-sidebar -->
+<aside class="app-sidebar sticky" id="sidebar">
+
+    <!-- Start::main-sidebar-header -->
+    <div class="main-sidebar-header">
+        <a href="index.html" class="header-logo">
+            <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+            <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+            <img src="../assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
+            <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+        </a>
+    </div>
+    <!-- End::main-sidebar-header -->
+
+    <!-- Start::main-sidebar -->
+    <div class="main-sidebar" id="sidebar-scroll">
+
+        <!-- Start::nav -->
+        <nav class="main-menu-container nav nav-pills flex-column sub-open">
+            <div class="slide-left" id="slide-left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg>
+            </div>
+            <!-- ...avant... -->
+<ul class="main-menu">
+    <!-- SUPPRIMER TOUT CE QUI CONCERNE DASHBOARDS ICI -->
+    <!-- SUPPRIMER la section Dashboards (category + bloc li) -->
+    <!-- SUPPRIMER les autres sections que tu ne veux pas garder -->
+
+    <!-- Garde uniquement les sections suivantes : -->
+
+    <!-- Start::slide__category -->
+    <li class="slide__category"><span class="category-name">Modules</span></li>
+    <!-- End::slide__category -->
+
+    <!-- Companies -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <rect x="48" y="48" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="144" y="48" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="48" y="144" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="144" y="144" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+            </svg>
+            <span class="side-menu__label">Companies</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="gallery.html" class="side-menu__item">Find Companies</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Accounting -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Accounting</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide side-menu__label1">
+                <a href="javascript:void(0)">Accounting</a>
+            </li>
+            <li class="slide">
+                <a href="index-2.html" class="side-menu__item">Invoicing</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Module 3 -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Module 3</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="index.html" class="side-menu__item">Sales</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Context -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Context</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="context.html" class="side-menu__item">Context</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+</ul>
+<!-- ...après... -->
+            <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
+        </nav>
+        <!-- End::nav -->
+
+    </div>
+    <!-- End::main-sidebar -->
+
+</aside>
+<!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Start::page-header -->
+                <div class="my-4 page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div>
+                        <h1 class="page-title fw-medium fs-18 mb-2">DASHBOARD </h1>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0);">
+                                    Companie
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Alruqee</li>
+                        </ol>
+                    </div>
+                    <div>
+                        
+                        <button class="btn btn-secondary-light btn-wave me-0 waves-effect waves-light">
+                            <i class="ri-upload-cloud-line align-middle"></i> Export Report
+                        </button>
+                    </div>
+                </div>
+                <!-- End::page-header -->
+
+                <!-- Start:: row-1 -->
+                <div class="row">
+                    <div class="col-xxl-9">
+                        <div class="row">
+                            <div class="col-xl-3">
+                                <div class="card custom-card overflow-hidden">
+                                    <div class="card-body p-0">
+                                        <div class="d-flex align-items-start flex-wrap gap-3 p-3 mb-1">
+                                            <div>
+                                                <span class="avatar avatar-md bg-primary svg-white">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path></svg>
+                                                </span>
+                                            </div>
+                                            <div class="flex-fill">
+                                                <span class="d-block mb-1">Contacts</span>
+                                                <h3 id="total-contacts" class="fw-semibold mb-0 lh-1">nombre contacts</h3>
+                                            </div>
+                                            <div class="text-end">
+                                                <span class="badge bg-success-transparent"><i class="ti ti-arrow-narrow-up me-1"></i>0.16%</span>
+                                            </div>
+                                        </div>
+                                        <div id="total-customers"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card custom-card overflow-hidden">
+                                    <div class="card-body p-0">
+                                        <div class="d-flex align-items-start flex-wrap gap-3 p-3 mb-1">
+                                            <div>
+                                                <span class="avatar avatar-md bg-secondary svg-white">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M40,56V184a16,16,0,0,0,16,16H216a8,8,0,0,0,8-8V80a8,8,0,0,0-8-8H56A16,16,0,0,1,40,56h0A16,16,0,0,1,56,40H192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="180" cy="132" r="12"/></svg>
+                                                </span>
+                                            </div>
+                                            <div class="flex-fill">
+                                                <span class="d-block mb-1">Total Market</span>
+                                                <h3 id="total-market" class="fw-semibold mb-0 lh-1">marche total</h3>
+                                            </div>
+                                            <div class="text-end">
+                                                <span class="badge bg-danger-transparent"><i class="ti ti-arrow-narrow-down me-1"></i>0.16%</span>
+                                            </div>
+                                        </div>
+                                        <div id="total-revenue"></div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card custom-card overflow-hidden">
+                                    <div class="card-body p-0">
+                                        <div class="d-flex align-items-start flex-wrap gap-3 p-3 mb-1">
+                                            <div>
+                                                <span class="avatar avatar-md bg-success svg-white">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="232 128 232 184 128 184 128 72 24 72 24 128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                                                </span>
+                                            </div>
+                                            <div class="flex-fill">
+                                                <span class="d-block mb-1">Matching</span>
+                                                <h3 id="average-total-score" class="fw-semibold mb-0 lh-1">71.67 %</h3>
+                                            </div>
+                                            <div class="text-end">
+                                                <span class="badge bg-success-transparent"><i class="ti ti-arrow-narrow-up me-1"></i>2.98%</span>
+                                            </div>
+                                        </div>
+                                        <div id="conversion-ratio"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card custom-card overflow-hidden">
+                                    <div class="card-body p-0">
+                                        <div class="d-flex align-items-start flex-wrap gap-3 p-3 mb-1">
+                                            <div>
+                                                <span class="avatar avatar-md bg-info svg-white">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><rect x="32" y="64" width="192" height="144" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M168,64V48a16,16,0,0,0-16-16H104A16,16,0,0,0,88,48V64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M224,118.31A191.09,191.09,0,0,1,128,144a191.14,191.14,0,0,1-96-25.68" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="112" y1="112" x2="144" y2="112" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                                                </span>
+                                            </div>
+                                            <div class="flex-fill">
+                                                <span class="d-block mb-1">Total Companies</span>
+                                                <h3 id="total-companies" class="fw-semibold mb-0 lh-1">nombre d'entreprises</h3>
+                                            </div>
+                                            <div class="text-end">
+                                                <span class="badge bg-success-transparent"><i class="ti ti-arrow-narrow-up me-1"></i>1.34%</span>
+                                            </div>
+                                        </div>
+                                        <div id="total-deals"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <div class="card custom-card">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            Features For each Industrie
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="features-industry-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="card custom-card">
+                                    <div class="card-header justify-content-between">
+                                        <div class="card-title">
+                                            Taches Effectuees
+                                        </div>
+                                        <div>
+                                            <ul class="nav nav-tabs justify-content-end nav-tabs-header" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link active" data-bs-toggle="tab" role="tab" aria-current="page" href="#orders" aria-selected="true">Today</a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-bs-toggle="tab" role="tab" aria-current="page" href="#accepted" aria-selected="false" tabindex="-1">Upcoming</a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-bs-toggle="tab" role="tab" aria-current="page" href="#declined" aria-selected="false" tabindex="-1">Completed</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body todo-tab p-0">
+                                        <div class="tab-content">
+                                            <div class="tab-pane border-0 active show" id="orders" role="tabpanel">
+                                                <ul class="list-unstyled task-list-tab">
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Seclection Entreprises</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Calcul Score</p>
+                                                                    <span class="badge bg-primary-transparent">Progress</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input" checked="">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Recherche compatibilite</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Eos dolor ea</p>
+                                                                    <span class="badge bg-success-transparent">Completed</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Recherche etendue</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Nonumy erat ipsum ut ipsum</p>
+                                                                    <span class="badge bg-danger-transparent">not Started</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Activite en direct</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Invi sadip takimata</p>
+                                                                    <span class="badge bg-primary-transparent">Progress</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check me-2">
+                                                                <input type="checkbox" class="form-check-input" checked="">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Recherche Contacts</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Sed labore ut sed</p>
+                                                                    <span class="badge bg-success-transparent">completed</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane border-0" id="accepted" role="tabpanel">
+                                                <ul class="list-unstyled task-list-tab">
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Build a New Team</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Nonumy erat ipsum ut ipsum</p>
+                                                                    <span class="badge bg-danger-transparent">not Started</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Meeting with Sales Team</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Consetetur et amet dolor</p>
+                                                                    <span class="badge bg-danger-transparent">not Started</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Created a New Task today</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Nonumy erat ipsum ut ipsum</p>
+                                                                    <span class="badge bg-danger-transparent">not Started</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Build a New Team</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Nonumy erat ipsum ut ipsum</p>
+                                                                    <span class="badge bg-danger-transparent">not Started</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist  d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">27 New people joined summit</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Accusam aliquyam ea sea</p>
+                                                                    <span class="badge bg-danger-transparent">not Started</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane border-0" id="declined" role="tabpanel">
+                                                <ul class="list-unstyled task-list-tab">
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input" checked="">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Meeting with Sales Team</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Eos dolor ea</p>
+                                                                    <span class="badge bg-success-transparent">Completed</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input" checked="">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Replied to new support request</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Eos clita dolor elitr et</p>
+                                                                    <span class="badge bg-success-transparent">Completed</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input" checked="">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Update of calendar events</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Sadi tempor guberg rebum</p>
+                                                                    <span class="badge bg-success-transparent">Completed</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input" checked="">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Added New Customers</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Sadi tempor guberg rebum</p>
+                                                                    <span class="badge bg-success-transparent">Completed</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="todolist d-flex">
+                                                            <div class="mb-3 form-check  me-2">
+                                                                <input type="checkbox" class="form-check-input" checked="">
+                                                            </div>
+                                                            <div class="flex-fill w-100">
+                                                                <div class="d-flex align-items-start justify-content-between">
+                                                                    <span class="d-block fw-semibold">Meeting with Sales Team</span>
+                                                                    <div class="">
+                                                                        <a href="javascript:void(0);" class="text-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="ti ti-trash"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <p class="text-muted mb-0 fs-13">Eos dolor ea</p>
+                                                                    <span class="badge bg-success-transparent">Completed</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Companies by Inudtry
+                                </div>
+                            </div>
+                            <div class="card-footer p-0">
+                                <ul class="list-group list-group-flush top-categories">
+                                    <!-- Les lignes du tableau seront insérées ici -->
+                                </ul>
+                            </div>
+                            <div class="card-body text-center">
+                                <!-- Bouton "Voir les entreprises" -->
+                                <a href="companies-tables.html" class="btn btn-primary btn-wave">
+                                    <i class="ti ti-eye align-middle"></i> Voir les entreprises
+                                </a>
+                            </div>
+                        </div>
+                    </div>                   
+                <!-- End:: row-1 -->
+
+                <!-- Start:: row-2 -->
+                <div class="row">
+                    <div class="col-xxl-6">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Best Compatibility
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled crm-top-deals mb-0" id="top-compatibility-list">
+                                    <!-- Les entreprises avec la meilleure compatibilité seront insérées ici -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Companies by Region
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="leads-channels"></div> <!-- Conteneur pour le graphique -->
+                            </div>
+                            <div class="card-footer p-0">
+                                <ul class="list-group list-group-flush crm-leads-channels-list">
+                                    <!-- Les lignes des régions seront insérées ici -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+                <!-- End:: row-2 -->
+
+                <!-- Start:: row-3 -->
+                <div class="row">
+                    <div class="col-xxl-9">
+                        <div class="card custom-card overflow-hidden">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title">
+                                    Contacts Identified
+                                </div>
+                                <div class="dropdown">
+                                    <div class="btn btn-outline-light border btn-full btn-sm" data-bs-toggle="dropdown">View All<i class="ti ti-chevron-down ms-1"></i>
+                                    </div>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Télécharger</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Importer</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Exporter</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Classement</th>
+                                                <th scope="col">Contact</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Entreprise</th>
+                                                <th scope="col">Position</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="contacts-table-body">
+                                            <!-- Les contacts seront insérés ici -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-xxl-3">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Last News
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled crm-recent-activity-list">
+                                    <!-- Les actualités des entreprises seront insérées ici -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+                <!-- End:: row-3 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+
+        <!-- Footer Start -->
+<footer class="footer mt-auto py-3 bg-white text-center">
+    <div class="container">
+        <span class="text-muted"> Copyright © <span id="year"></span> <a
+                href="javascript:void(0);" class="text-dark fw-medium">LYDI.AI</a>.
+            Designed with <span class="bi bi-heart-fill text-danger"></span> by <a href="https://wcsrm.com/" target="_blank">
+                <span class="fw-medium text-primary">BMATCH</span>
+            </a> All
+            rights
+            reserved
+        </span>
+    </div>
+</footer>
+<!-- Footer End -->
+         <div class="modal fade" id="header-responsive-search" tabindex="-1" aria-labelledby="header-responsive-search" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="form-control border-end-0" placeholder="Search Anything ..."
+                        aria-label="Search Anything ..." aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button"
+                        id="button-addon2"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+   
+<!-- Scroll To Top -->
+<div class="scrollToTop">
+    <span class="arrow lh-1"><i class="ti ti-arrow-big-up fs-16"></i></span>
+</div>
+<div id="responsive-overlay"></div>
+<!-- Scroll To Top -->
+
+<!-- Popper JS -->
+<script src="../assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Defaultmenu JS -->
+<script src="../assets/js/defaultmenu.min.js"></script>
+
+<!-- Node Waves JS-->
+<script src="../assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Sticky JS -->
+<script src="../assets/js/sticky.js"></script>
+
+<!-- Simplebar JS -->
+<script src="../assets/libs/simplebar/simplebar.min.js"></script>
+<script src="../assets/js/simplebar.js"></script>
+
+<!-- Auto Complete JS -->
+<script src="../assets/libs/@tarekraafat/autocomplete.js/autoComplete.min.js"></script>
+
+<!-- Color Picker JS -->
+<script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+<!-- Date & Time Picker JS -->
+<script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- CRM Dashboard --> 
+    <script src="../assets/js/crm-dashboard.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+ 
+   
+<!-- Custom-Switcher JS -->
+<script src="../assets/js/custom-switcher.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+<script>
+    // Charger et analyser les données des fichiers JSON
+    Promise.all([
+        fetch('../../../contacts.json').then(response => response.json()), // Chemin vers le fichier JSON des contacts
+        fetch('../../../companies_enriched.json').then(response => response.json()) // Chemin vers le fichier JSON des entreprises
+    ])
+    .then(([contactsData, companiesData]) => {
+        // Calculer le nombre total de contacts
+        const totalContacts = contactsData.length;
+
+        // Calculer le marché total (somme des chiffres d'affaires)
+        const totalMarket = companiesData.reduce((sum, company) => {
+            const revenue = parseFloat(company['2024 Revenue (USD)']) || 0;
+            return sum + revenue;
+        }, 0);
+
+        // Calculer la moyenne du Total Score %
+        const totalScoreSum = companiesData.reduce((sum, company) => {
+            const totalScore = parseFloat(company['Total Score %']) || 0;
+            return sum + totalScore;
+        }, 0);
+        const averageTotalScore = companiesData.length > 0 ? (totalScoreSum / companiesData.length).toFixed(2) : 0;
+
+        // Calculer le nombre total d'entreprises
+        const totalCompanies = companiesData.length;
+
+        // Mettre à jour les éléments HTML avec les résultats
+        document.querySelector('#total-contacts').textContent = totalContacts;
+        document.querySelector('#total-market').textContent = `$${totalMarket.toLocaleString()}`;
+        document.querySelector('#average-total-score').textContent = `${averageTotalScore}%`;
+        document.querySelector('#total-companies').textContent = totalCompanies;
+    })
+    .catch(error => console.error('Erreur lors du chargement des données :', error));
+</script>
+
+<script>
+    // Charger et analyser les données des fichiers JSON
+    Promise.all([
+        fetch('../../../contacts.json').then(response => response.json()), // Chemin vers le fichier JSON des contacts
+        fetch('../../../companies_enriched.json').then(response => response.json()) // Chemin vers le fichier JSON des entreprises
+    ])
+    .then(([contactsData, companiesData]) => {
+        // Calculer le nombre d'entreprises par industrie
+        const industryCounts = {};
+        companiesData.forEach(company => {
+            const industry = company['Industry'] || 'Industrie inconnue';
+            if (!industryCounts[industry]) {
+                industryCounts[industry] = { companies: 0, contacts: 0 };
+            }
+            industryCounts[industry].companies++;
+        });
+
+        // Calculer le nombre de contacts par industrie
+        contactsData.forEach(contact => {
+            const companyName = contact['Company'];
+            const company = companiesData.find(c => c['Company Name'] === companyName);
+            if (company) {
+                const industry = company['Industry'] || 'Industrie inconnue';
+                if (industryCounts[industry]) {
+                    industryCounts[industry].contacts++;
+                }
+            }
+        });
+
+        // Trier les industries par nombre d'entreprises (descendant)
+        const sortedIndustries = Object.entries(industryCounts).sort((a, b) => b[1].companies - a[1].companies);
+
+        // Générer les lignes du tableau HTML
+        let industryRows = '';
+        sortedIndustries.forEach(([industry, counts], index) => {
+            industryRows += `
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="lh-1">
+                            <div class="fw-semibold mb-1">${industry}</div>
+                            <div><span class="text-muted fs-13">Industrie ${index + 1}</span></div>
+                        </div>
+                        <div class="lh-1 text-end">
+                            <span class="d-block fw-semibold h6 mb-0">${counts.companies}</span>
+                            <span class="d-block fs-13 text-muted">Companies</span>
+                            <span class="d-block fw-semibold h6 mb-0">${counts.contacts}</span>
+                            <span class="d-block fs-13 text-muted">Contacts</span>
+                        </div>
+                    </div>
+                </li>
+            `;
+        });
+
+        // Insérer les lignes dans le tableau HTML
+        const industryList = document.querySelector('.top-categories');
+        industryList.innerHTML = industryRows;
+    })
+    .catch(error => console.error('Erreur lors du chargement des données :', error));
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Charger et analyser les données des entreprises depuis le fichier JSON
+        fetch('../../../companies_enriched.json')
+            .then(response => response.json())
+            .then(companiesData => {
+                // Trier les entreprises par "Total Score" (décroissant) et sélectionner les 5 meilleures
+                const topCompanies = companiesData
+                    .sort((a, b) => parseFloat(b["Total Score"]) - parseFloat(a["Total Score"]))
+                    .slice(0, 5);
+
+                // Générer les lignes HTML pour les actualités
+                let newsHTML = '';
+                topCompanies.forEach(company => {
+                    const companyName = company["Company Name"] || "Nom non disponible";
+                    const newsDate = company["Date"] || "Non disponible";
+                    const newsContent = company["News"] || "Aucune actualité disponible.";
+
+                    newsHTML += `
+                        <li>
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="fw-semibold mb-0">${companyName}</div>
+                                    <span class="badge bg-light text-default border">${newsDate}</span>
+                                </div>
+                                <div class="text-muted fs-13 w-75">${newsContent}</div>
+                            </div>
+                        </li>
+                    `;
+                });
+
+                // Insérer les actualités dans le conteneur HTML
+                const newsList = document.querySelector('.crm-recent-activity-list');
+                if (newsList) {
+                    newsList.innerHTML = newsHTML;
+                } else {
+                    console.error("L'élément .crm-recent-activity-list est introuvable.");
+                }
+            })
+            .catch(error => console.error('Erreur lors du chargement des données :', error));
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Charger et analyser les données des entreprises depuis le fichier JSON
+        fetch('../../../companies_enriched.json')
+            .then(response => response.json())
+            .then(companiesData => {
+                // Trier les entreprises par "Total Score %" (décroissant) et sélectionner les 5 meilleures
+                const topCompanies = companiesData
+                    .sort((a, b) => parseFloat(b["Total Score %"]) - parseFloat(a["Total Score %"]))
+                    .slice(0, 5);
+
+                // Générer les lignes HTML pour les entreprises
+                let compatibilityHTML = '';
+                topCompanies.forEach(company => {
+                    const companyName = company["Company Name"] || "Nom non disponible";
+                    const companyDomain = company["Domain"] || "Domaine non disponible";
+                    const totalScore = company["Total Score %"] || "0 %";
+
+                    compatibilityHTML += `
+                        <li>
+                            <div class="d-flex align-items-center flex-wrap gap-2">
+                                <div class="lh-1">
+                                    <span class="avatar avatar-sm rounded-1">
+                                        <img src="../assets/images/faces/placeholder.jpg" alt="">
+                                    </span>
+                                </div>
+                                <div class="flex-fill">
+                                    <span class="fw-semibold d-block lh-1">${companyName}</span>
+                                    <span class="text-muted fs-13">${companyDomain}</span>
+                                </div>
+                                <div class="fw-semibold mb-0 h6">${totalScore}</div>
+                            </div>
+                        </li>
+                    `;
+                });
+
+                // Insérer les entreprises dans le conteneur HTML
+                const compatibilityList = document.querySelector('#top-compatibility-list');
+                if (compatibilityList) {
+                    compatibilityList.innerHTML = compatibilityHTML;
+                } else {
+                    console.error("L'élément #top-compatibility-list est introuvable.");
+                }
+            })
+            .catch(error => console.error('Erreur lors du chargement des données :', error));
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Charger et analyser les données des contacts depuis le fichier JSON
+        fetch('../../../contacts.json')
+            .then(response => response.json())
+            .then(contactsData => {
+                // Grouper les contacts par entreprise
+                const groupedContacts = {};
+                contactsData.forEach(contact => {
+                    const company = contact["Company"] || "Entreprise inconnue";
+                    if (!groupedContacts[company]) {
+                        groupedContacts[company] = contact; // Prendre le premier contact pour chaque entreprise
+                    }
+                });
+
+                // Générer les lignes HTML pour les contacts
+                let contactsHTML = '';
+                let ranking = 1;
+                Object.values(groupedContacts).forEach(contact => {
+                    const firstName = contact["First Name"] || "Prénom inconnu";
+                    const lastName = contact["Last Name"] || "Nom inconnu";
+                    const email = contact["Email"] || "Email inconnu";
+                    const company = contact["Company"] || "Entreprise inconnue";
+                    const position = contact["Position"] || "Métier inconnu";
+
+                    contactsHTML += `
+                        <tr>
+                            <td>
+                                <span class="">${ranking++}</span>
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <span class="avatar avatar-sm">
+                                        <img src="../assets/images/faces/placeholder.jpg" class="" alt="">
+                                    </span>
+                                    <div class="flex-1 ms-2">
+                                        <span class="d-block fw-semibold lh-1">${firstName} ${lastName}</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="">${email}</span>
+                            </td>
+                            <td>
+                                <span class="">${company}</span>
+                            </td>
+                            <td>
+                                <span class="">${position}</span>
+                            </td>
+                        </tr>
+                    `;
+                });
+
+                // Insérer les contacts dans le tableau HTML
+                const contactsTableBody = document.querySelector('#contacts-table-body');
+                if (contactsTableBody) {
+                    contactsTableBody.innerHTML = contactsHTML;
+                } else {
+                    console.error("L'élément #contacts-table-body est introuvable.");
+                }
+            })
+            .catch(error => console.error('Erreur lors du chargement des données :', error));
+    });
+</script>
+<script>
+window.addEventListener("storage", function(event) {
+    if (event.key === "dashboardNeedsRefresh") {
+        // Recharge la page ou relance tes scripts de dashboard
+        location.reload(); // ou appelle ici ta fonction de refresh si tu en as une
+    }
+});
+</script>
+
+</body>
+
+</html> 

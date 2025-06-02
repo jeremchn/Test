@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1a3d7c;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .details th, .details td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .details th {
+            background-color: #1a3d7c;
+            color: #fff;
+            font-weight: bold;
+        }
+        .contacts {
+            margin-top: 30px;
+        }
+        .contacts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contacts li {
+            margin-bottom: 1em;
+        }
+        .contacts h2 {
+            margin-bottom: 10px;
+        }
+        .no-data {
+            color: #888;
+            font-style: italic;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #1a3d7c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<!-- ...existing code... -->
+<body>
+    <div class="container">
+        <h1 id="companyName">Company Details</h1>
+        <a href="#" id="backButton" class="back-button">Back to Table</a>
+        <div class="details" id="companyDetails"></div>
+        <div class="contacts">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h2 style="margin-bottom: 10px;">Contacts</h2>
+                <a id="viewAllContacts" href="#" style="font-size: 0.95em; color: #1a3d7c; text-decoration: underline; margin-left: 10px;">View all</a>
+            </div>
+            <div id="contacts"></div>
+        </div>
+    </div>
+
+    <script>
+    const HUNTER_API_KEY = "2222faabcb33adf838c9f77752b5451af39ce567";
+    const OPENAI_API_KEY = "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";
+
+    // Set back button destination based on referrer
+    document.addEventListener("DOMContentLoaded", function() {
+        const ref = document.referrer;
+        const backButton = document.getElementById("backButton");
+        if (ref.includes("context.html")) {
+            backButton.href = "context.html";
+        } else {
+            backButton.href = "gallery.html";
+        }
+    });
+
+
+    async function fetchCompanyDetails() {
+        const params = new URLSearchParams(window.location.search);
+        const company = params.get("company");
+        if (!company) return alert("No company specified.");
+        // Met à jour le lien "View all" avec le nom de la société
+        document.getElementById("viewAllContacts").href = `contacts.html?company=${encodeURIComponent(company)}`;
+
+        document.getElementById("companyName").textContent = `Company Details: ${company}`;
+
+        // Show loading message
+        document.getElementById("companyDetails").innerHTML = "<p>Searching for information...</p>";
+        document.getElementById("contacts").innerHTML = "";
+
+        try {
+            // Hunter API for company contacts
+            const hunterResponse = await fetch(`https://api.hunter.io/v2/domain-search?company=${encodeURIComponent(company)}&api_key=${HUNTER_API_KEY}`);
+            const hunterData = await hunterResponse.json();
+
+            // OpenAI API for company details (in English)
+            const openaiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${OPENAI_API_KEY}`
+                },
+                body: JSON.stringify({
+                    model: "gpt-3.5-turbo",
+                    messages: [
+                        { role: "system", content: "You are an assistant that provides detailed information about companies. Return only a raw JSON object, no extra text or Markdown." },
+                        { role: "user", content: `Give all possible information about the company "${company}" as a JSON object with the following columns: Company Name, Type, Industry, Founded, Founders, Headquarters, Service Area, Main Products, Subsidiary Of, Number of Employees, Net Revenue, Website.` }
+                    ],
+                    max_tokens: 1000,
+                    temperature: 0.7
+                })
+            });
+
+            const openaiData = await openaiResponse.json();
+            console.log("Raw OpenAI response:", openaiData);
+
+            // Parse the raw JSON
+            let openaiContent;
+            try {
+                openaiContent = JSON.parse(openaiData.choices[0].message.content);
+            } catch (err) {
+                console.error("JSON parsing error:", err);
+                document.getElementById("companyDetails").innerHTML = "<p>Error: The OpenAI API response is not in the expected format.</p>";
+                return;
+            }
+
+            // Ensure all required keys are present
+            const requiredKeys = [
+                "Company Name", "Type", "Industry", "Founded", "Founders",
+                "Headquarters", "Service Area", "Main Products", "Subsidiary Of",
+                "Number of Employees", "Net Revenue", "Website"
+            ];
+
+            requiredKeys.forEach(key => {
+                if (!(key in openaiContent)) {
+                    console.warn(`Missing key in response: ${key}`);
+                    openaiContent[key] = "Not defined";
+                }
+            });
+
+            // Display company details
+            const companyDetails = document.getElementById("companyDetails");
+            const detailsHTML = `
+                <table>
+                    <tr><th>Company Name</th><td>${openaiContent["Company Name"]}</td></tr>
+                    <tr><th>Type</th><td>${openaiContent["Type"]}</td></tr>
+                    <tr><th>Industry</th><td>${openaiContent["Industry"]}</td></tr>
+                    <tr><th>Founded</th><td>${openaiContent["Founded"]}</td></tr>
+                    <tr><th>Founders</th><td>${Array.isArray(openaiContent["Founders"]) ? openaiContent["Founders"].join(", ") : openaiContent["Founders"]}</td></tr>
+                    <tr><th>Headquarters</th><td>${openaiContent["Headquarters"]}</td></tr>
+                    <tr><th>Service Area</th><td>${openaiContent["Service Area"]}</td></tr>
+                    <tr><th>Main Products</th><td>${Array.isArray(openaiContent["Main Products"]) ? openaiContent["Main Products"].join(", ") : openaiContent["Main Products"]}</td></tr>
+                    <tr><th>Subsidiary Of</th><td>${openaiContent["Subsidiary Of"]}</td></tr>
+                    <tr><th>Number of Employees</th><td>${openaiContent["Number of Employees"]}</td></tr>
+                    <tr><th>Net Revenue</th><td>${openaiContent["Net Revenue"]}</td></tr>
+                    <tr><th>Website</th><td><a href="${openaiContent["Website"]}" target="_blank">${openaiContent["Website"]}</a></td></tr>
+                </table>
+            `;
+            companyDetails.innerHTML = detailsHTML;
+
+            // Display contacts (all available info: first name, last name, company, position, email)
+            const contacts = document.getElementById("contacts");
+            if (hunterData.data && hunterData.data.emails && hunterData.data.emails.length > 0) {
+                const contactList = hunterData.data.emails.map(email => `
+                    <li>
+                        <strong>${email.first_name || ""} ${email.last_name || ""}</strong>
+                        ${email.position ? ` - ${email.position}` : ""} 
+                        ${email.company || ""} 
+                        ${email.value ? `- <a href="mailto:${email.value}">${email.value}</a>` : ""}
+                    </li>
+                `).join("");
+                contacts.innerHTML = `<ul>${contactList}</ul>`;
+            } else {
+                contacts.innerHTML = "<p>No contacts found.</p>";
+            }
+        } catch (err) {
+            console.error("Error fetching details:", err);
+            document.getElementById("companyDetails").innerHTML = "<p>Error fetching details.</p>";
+        }
+    }
+
+    fetchCompanyDetails();
+</script>
+</body>
+</html>

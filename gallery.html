@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-width="fullwidth" data-menu-styles="light" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> ZYNIX - Bootstrap 5 Premium Admin & Dashboard Template </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Wcsrm Software Private Limited">
+	<meta name="keywords" content="bootstrap template, admin panel bootstrap, bootstrap dashboard, admin, admin dashboard template, dashboard template, html css templates, dashboard, template dashboard,  bootstrap dashboard template, dashboard html css, bootstrap admin dashboard,  bootstrap admin, dashboard template, bootstrap5 admin template">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Main Theme Js -->
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="../assets/css/styles.css" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet" > 
+
+    <!-- Simplebar Css -->
+    <link href="../assets/libs/simplebar/simplebar.min.css" rel="stylesheet" >
+    
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- FlatPickr CSS -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+
+    <!-- Auto Complete CSS -->
+    <link rel="stylesheet" href="../assets/libs/@tarekraafat/autocomplete.js/css/autoComplete.css">
+
+<!-- GLightbox CSS -->
+<link rel="stylesheet" href="../assets/libs/glightbox/css/glightbox.min.css">
+
+<style>
+    #resultsTable tr, #resultsTable td, #resultsTable th {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        height: 14px !important;
+        font-size: 0.88rem;
+        line-height: 1.1 !important;
+    }
+</style>
+
+<style>
+    #resultsTable td:nth-child(7),
+    #resultsTable th:nth-child(7) {
+        min-width: 360px !important;
+        width: 360px !important;
+        max-width: 600px;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    /* Rendre la colonne Ice breaker plus large et les lignes plus fines */
+#resultsTable td:nth-child(12),
+#resultsTable th:nth-child(12) {
+    min-width: 900px !important;   /* 340 + 300 */
+    width: 900px !important;
+    max-width: 1500px;
+    white-space: normal;
+    word-break: break-word;
+}
+#resultsTable tr, #resultsTable td, #resultsTable th {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 7px !important; /* lignes plus fines */
+    font-size: 0.88rem;
+    line-height: 1.05 !important;
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Start Switcher -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header border-bottom d-block p-0">
+        <div class="d-flex align-items-center justify-content-between p-3">
+            <h5 class="offcanvas-title text-default" id="offcanvasRightLabel">Switcher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <nav class="border-top border-block-start-dashed">
+            <div class="nav nav-tabs nav-justified" id="switcher-main-tab" role="tablist">
+                <button class="nav-link active" id="switcher-home-tab" data-bs-toggle="tab" data-bs-target="#switcher-home"
+                    type="button" role="tab" aria-controls="switcher-home" aria-selected="true">Theme Styles</button>
+                <button class="nav-link" id="switcher-profile-tab" data-bs-toggle="tab" data-bs-target="#switcher-profile"
+                    type="button" role="tab" aria-controls="switcher-profile" aria-selected="false">Theme Colors</button>
+            </div>
+        </nav>
+    </div>
+    <div class="offcanvas-body">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active border-0" id="switcher-home" role="tabpanel" aria-labelledby="switcher-home-tab"
+                tabindex="0">
+                <div class="">
+                    <p class="switcher-style-head">Theme Color Mode:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-light-theme">
+                                    Light
+                                </label>
+                                <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-dark-theme">
+                                    Dark
+                                </label>
+                                <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Directions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-ltr">
+                                    LTR
+                                </label>
+                                <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-rtl">
+                                    RTL
+                                </label>
+                                <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Navigation Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-vertical">
+                                    Vertical
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-style" id="switcher-vertical"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-horizontal">
+                                    Horizontal
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-style"
+                                    id="switcher-horizontal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-menu-styles">
+                    <p class="switcher-style-head">Vertical & Horizontal Menu Styles:</p>
+                    <div class="row switcher-style gx-0 pb-2 gy-2">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-click">
+                                    Menu Click
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-menu-click">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-hover">
+                                    Menu Hover
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-menu-hover">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-click">
+                                    Icon Click
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-icon-click">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-hover">
+                                    Icon Hover
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-icon-hover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidemenu-layout-styles">
+                    <p class="switcher-style-head">Sidemenu Layout Styles:</p>
+                    <div class="row switcher-style gx-0 pb-2 gy-2">
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-default-menu">
+                                    Default Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-default-menu" checked>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-closed-menu">
+                                    Closed Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-closed-menu">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icontext-menu">
+                                    Icon Text
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-icontext-menu">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-overlay">
+                                    Icon Overlay
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-icon-overlay">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-detached">
+                                    Detached
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-detached">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-double-menu">
+                                    Double Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-double-menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Page Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-regular">
+                                    Regular
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-regular"
+                                checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-classic">
+                                    Classic
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-classic">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-modern">
+                                    Modern
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-modern">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Layout Width Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-default-width">
+                                    compact
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-default-width"
+                                   >
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-full-width">
+                                    Full Width
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-full-width"  checked>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-boxed">
+                                    Boxed
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-boxed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Menu Positions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-fixed">
+                                    Fixed
+                                </label>
+                                <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-fixed"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-scroll">
+                                    Scrollable
+                                </label>
+                                <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-scroll">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Header Positions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-header-fixed">
+                                    Fixed
+                                </label>
+                                <input class="form-check-input" type="radio" name="header-positions"
+                                    id="switcher-header-fixed" checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-header-scroll">
+                                    Scrollable
+                                </label>
+                                <input class="form-check-input" type="radio" name="header-positions"
+                                    id="switcher-header-scroll">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Loader:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-loader-enable">
+                                    Enable
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-loader"
+                                    id="switcher-loader-enable">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-loader-disable">
+                                    Disable
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-loader"
+                                    id="switcher-loader-disable" checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade border-0" id="switcher-profile" role="tabpanel" aria-labelledby="switcher-profile-tab" tabindex="0">
+                <div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Menu Colors:</p>
+                        <div class="d-flex switcher-style pb-2">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Light Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-light" checked>
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Dark Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-dark">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Color Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Gradient Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-gradient">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-transparent"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Transparent Menu"
+                                    type="radio" name="menu-colors" id="switcher-menu-transparent">
+                            </div>
+                        </div>
+                        <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Menu dynamically change from below Theme Primary color picker</div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Header Colors:</p>
+                        <div class="d-flex switcher-style pb-2">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Light Header" type="radio" name="header-colors"
+                                    id="switcher-header-light" checked>
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Dark Header" type="radio" name="header-colors"
+                                    id="switcher-header-dark">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Color Header" type="radio" name="header-colors"
+                                    id="switcher-header-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Gradient Header" type="radio" name="header-colors"
+                                    id="switcher-header-gradient">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-transparent" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Transparent Header" type="radio" name="header-colors"
+                                    id="switcher-header-transparent">
+                            </div>
+                        </div>
+                        <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Header dynamically change from below Theme Primary color picker</div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Theme Primary:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-1" type="radio"
+                                    name="theme-primary" id="switcher-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-2" type="radio"
+                                    name="theme-primary" id="switcher-primary1">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                                    id="switcher-primary2">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                                    id="switcher-primary3">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                                    id="switcher-primary4">
+                            </div>
+                            <div class="form-check switch-select ps-0 mt-1 color-primary-light">
+                                <div class="theme-container-primary"></div>
+                                <div class="pickr-container-primary"  onchange="updateChartColor(this.value)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Theme Background:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-1" type="radio"
+                                    name="theme-background" id="switcher-background">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-2" type="radio"
+                                    name="theme-background" id="switcher-background1">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-3" type="radio" name="theme-background"
+                                    id="switcher-background2">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-4" type="radio"
+                                    name="theme-background" id="switcher-background3">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-5" type="radio"
+                                    name="theme-background" id="switcher-background4">
+                            </div>
+                            <div class="form-check switch-select ps-0 mt-1 tooltip-static-demo color-bg-transparent">
+                                <div class="theme-container-background"></div>
+                                <div class="pickr-container-background"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-image mb-3">
+                        <p class="switcher-style-head">Menu With Background Image:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img1" type="radio"
+                                    name="menu-background" id="switcher-bg-img">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img2" type="radio"
+                                    name="menu-background" id="switcher-bg-img1">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img3" type="radio" name="menu-background"
+                                    id="switcher-bg-img2">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img4" type="radio"
+                                    name="menu-background" id="switcher-bg-img3">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img5" type="radio"
+                                    name="menu-background" id="switcher-bg-img4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block canvas-footer flex-wrap">
+                <a href="javascript:void(0);" id="reset-all" class="btn btn-danger m-1 w-100">Reset</a> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Switcher -->
+
+
+     <!-- Loader -->
+<div id="loader" >
+    <img src="../assets/images/media/loader.svg" alt="">
+</div>
+<!-- Loader -->
+
+    <div class="page">
+         
+         <!-- Start::app-sidebar -->
+<aside class="app-sidebar sticky" id="sidebar">
+
+    <!-- Start::main-sidebar-header -->
+    <div class="main-sidebar-header">
+        <a href="index.html" class="header-logo">
+            <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+            <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+            <img src="../assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
+            <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+        </a>
+    </div>
+    <!-- End::main-sidebar-header -->
+
+    <!-- Start::main-sidebar -->
+    <div class="main-sidebar" id="sidebar-scroll">
+
+        <!-- Start::nav -->
+        <nav class="main-menu-container nav nav-pills flex-column sub-open">
+            <div class="slide-left" id="slide-left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg>
+            </div>
+            <!-- ...avant... -->
+<ul class="main-menu">
+    <!-- SUPPRIMER TOUT CE QUI CONCERNE DASHBOARDS ICI -->
+    <!-- SUPPRIMER la section Dashboards (category + bloc li) -->
+    <!-- SUPPRIMER les autres sections que tu ne veux pas garder -->
+
+    <!-- Garde uniquement les sections suivantes : -->
+
+    <!-- Start::slide__category -->
+    <li class="slide__category"><span class="category-name">Modules</span></li>
+    <!-- End::slide__category -->
+
+    <!-- Companies -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <rect x="48" y="48" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="144" y="48" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="48" y="144" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="144" y="144" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+            </svg>
+            <span class="side-menu__label">Companies</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="gallery.html" class="side-menu__item">Find Companies</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Accounting -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Accounting</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide side-menu__label1">
+                <a href="javascript:void(0)">Accounting</a>
+            </li>
+            <li class="slide">
+                <a href="index-2.html" class="side-menu__item">Invoicing</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Module 3 -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Module 3</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="index.html" class="side-menu__item">Sales</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Context -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Context</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="context.html" class="side-menu__item">Context</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+</ul>
+<!-- ...après... -->
+            <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
+        </nav>
+        <!-- End::nav -->
+
+    </div>
+    <!-- End::main-sidebar -->
+
+</aside>
+<!-- End::app-sidebar -->
+<!-- ...existing code... -->
+<div class="main-content app-content">
+    <div class="container my-4">
+        <div class="d-flex justify-content-end mb-2">
+            <button class="btn btn-primary" style="background-color:#6f42c1; border-color:#6f42c1; min-width:110px;" onclick="resetResults()">Reset</button>
+        </div>
+        <h1 class="text-center">Find Companies</h1>
+        
+        <!-- Section Company Name en premier -->
+        <div class="card p-3 mb-4">
+            <div class="mt-1">
+                <h5 class="mb-2" style="font-family: inherit;">Your Company Website</h5>
+                <div class="d-flex align-items-center mb-2">
+                    <input type="text" id="companyWebsiteInput" class="form-control me-2" style="max-width:250px;" placeholder="https://...">
+                    <button class="btn btn-primary" style="height:38px; padding:0 18px; min-width:150px;" onclick="saveCompanyWebsite()">Save Website</button>
+                </div>
+                <div id="companyStatus" class="text-success text-center mt-2" style="display: none;">
+                    Website has been saved.
+                </div>
+            </div>
+            <!-- Fin section Company Name -->
+
+            <!-- Section Company Profile & Context en deuxième -->
+            <div class="mt-4">
+                <h5 class="mb-2">Set your Company Context</h5>
+                <textarea id="contextInput" class="form-control mb-2" rows="6" style="min-height:120px;" placeholder="Describe your company profile and context..."></textarea>
+                <button class="btn btn-primary mb-2" style="height:38px; padding:0 18px; max-width:150px;" onclick="setContext()">Save Context</button>
+                <div id="contextStatus" class="text-success text-center mt-2" style="display: none;">
+                    Context has been updated.
+                </div>
+            </div>
+
+            <div style="height: 48px;"></div>
+            <div class="d-grid mt-2">
+                <button class="btn btn-success" onclick="launchSearch()">Launch</button>
+            </div>
+        </div>
+<!-- ...existing code... -->
+        <!-- Loader -->
+        <div class="loader text-center" id="loader" style="display: none;">
+            <img src="../assets/images/media/loader.svg" alt="Chargement...">
+        </div>
+
+        <!-- Tableau des résultats -->
+        <div class="table-responsive">
+            <table id="resultsTable" class="table table-striped table-bordered mt-4" style="display: none;">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nom de l'entreprise</th>
+                        <th>Secteur d'activité</th>
+                        <th>Taille</th>
+                        <th>Marché cible</th>
+                        <th>Zone géographique</th>
+                        <th>Modèle économique</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Message si aucun résultat -->
+        <p class="text-muted text-center" id="noResults" style="display: none;">Aucune entreprise similaire trouvée.</p>
+
+        <!-- Section Advices -->
+        <div id="adviceSection" class="mt-5" style="display: none;">
+            <h3 class="text-center">Advices</h3>
+            <div id="adviceContent" class="alert alert-info"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ...existing code... -->
+
+
+
+
+    <!-- Scripts -->
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/libs/simplebar/simplebar.min.js"></script>
+    <script>
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                searchSimilarCompanies();
+            }
+        }
+    </script>
+    <!-- Scroll To Top -->
+<div class="scrollToTop">
+    <span class="arrow lh-1"><i class="ti ti-arrow-big-up fs-16"></i></span>
+</div>
+<div id="responsive-overlay"></div>
+<!-- Scroll To Top -->
+
+<!-- Popper JS -->
+<script src="../assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Defaultmenu JS -->
+<script src="../assets/js/defaultmenu.min.js"></script>
+
+<!-- Node Waves JS-->
+<script src="../assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Sticky JS -->
+<script src="../assets/js/sticky.js"></script>
+
+<!-- Simplebar JS -->
+<script src="../assets/libs/simplebar/simplebar.min.js"></script>
+<script src="../assets/js/simplebar.js"></script>
+
+<!-- Auto Complete JS -->
+<script src="../assets/libs/@tarekraafat/autocomplete.js/autoComplete.min.js"></script>
+
+<!-- Color Picker JS -->
+<script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+<!-- Date & Time Picker JS -->
+<script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Crypto Dashboard --> 
+    <script src="../assets/js/crypto-dashboard.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+ 
+   
+<!-- Custom-Switcher JS -->
+<script src="../assets/js/custom-switcher.min.js"></script>
+
+<!-- ...existing code... -->
+
+<script>
+const OPENAI_API_KEY = "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";
+
+
+// Sauvegarde le site web de la société dans le localStorage
+function saveCompanyWebsite() {
+    const companyWebsite = document.getElementById("companyWebsiteInput").value.trim();
+    if (!companyWebsite) {
+        alert("Please enter a company website.");
+        return;
+    }
+    localStorage.setItem("companySearchWebsite", companyWebsite);
+    document.getElementById("companyStatus").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("companyStatus").style.display = "none";
+    }, 2000);
+}
+
+
+// Sauvegarde le contexte dans le localStorage
+function setContext() {
+    const contextValue = document.getElementById("contextInput").value.trim();
+    if (!contextValue) {
+        alert("Please enter a context.");
+        return;
+    }
+    localStorage.setItem("companySearchContext", contextValue);
+    document.getElementById("contextStatus").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("contextStatus").style.display = "none";
+    }, 2000);
+}
+
+// Sauvegarde la company dans le localStorage
+function saveCompany() {
+    const companyName = document.getElementById("companyInput").value.trim();
+    if (!companyName) {
+        alert("Please enter a company name.");
+        return;
+    }
+    localStorage.setItem("companySearchCompany", companyName);
+    document.getElementById("companyStatus").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("companyStatus").style.display = "none";
+    }, 2000);
+}
+
+// Lance la recherche avec le contexte et la company enregistrée
+async function launchSearch() {
+    const companyWebsite = localStorage.getItem("companySearchWebsite") || "";
+    if (!companyWebsite) {
+        alert("Please save a company website first.");
+        return;
+    }
+    await searchSimilarCompanies(companyWebsite);
+    }
+
+// Modifie searchSimilarCompanies pour prendre un paramètre facultatif
+// Code à mettre à la place :
+async function searchSimilarCompanies(companyWebsite) {
+    const loader = document.getElementById("loader");
+    const resultsTable = document.getElementById("resultsTable");
+    const resultsBody = document.getElementById("resultsBody");
+    const noResults = document.getElementById("noResults");
+    const adviceSection = document.getElementById("adviceSection");
+    const adviceContent = document.getElementById("adviceContent");
+
+    // Set English headers
+    const headers = [
+        "Company Name",
+        "Domain",
+        "Industry",
+        "Location",
+        "Headcount",
+        "Linkedin",
+        "Description",
+        "Company Type",
+        "Keywords",
+        "Technologies",
+        "Ice breaker"
+    ];
+    resultsTable.querySelector("thead tr").innerHTML = headers.map(h => `<th>${h}</th>`).join("");
+
+    // Reset display
+    resultsTable.style.display = "none";
+    noResults.style.display = "none";
+    resultsBody.innerHTML = "";
+    adviceSection.style.display = "none";
+    adviceContent.innerHTML = "";
+
+    if (!companyWebsite) {
+        alert("Please enter a company website.");
+        return;
+    }
+
+    loader.style.display = "block";
+    console.log("Searching for:", companyWebsite);
+
+    try {
+        // ...reste du code inchangé...
+        // Récupère le contexte stocké (ou chaîne vide si non défini)
+        const context = localStorage.getItem("companySearchContext") || "";
+        // Construit le message utilisateur avec le contexte au début
+        const userMessage =
+            (context ? context + "\n\n" : "") +
+            `You are a B2B business development assistant.
+        I am looking for 30 real potential client companies similar to the company whose website is: ${companyWebsite}.
+        Use the website and the following context to understand the company's profile and needs: ${context ? context : "No additional context"}.
+
+        For each similar company, research their official website and provide real and up-to-date information for ALL the following columns:
+        Company Name, Domain, Industry, Location, Headcount, Linkedin, Description, Company Type, Keywords, Technologies, Ice breaker.
+
+        Respond ONLY with a CSV table, using the pipe character "|" as the separator, with the first row as headers.
+        **IMPORTANT: In the Industry column, use at most 5 different industry values for all companies. Choose the 5 most relevant industries for this context and assign each company to the closest one.**
+        In the Ice breaker column, write a short, personalized, and relevant sentence in English that could be used as the opening line of a cold email to this company, based on information found on their website.
+        Do NOT add any separator line (like ---), only the header and the data rows.
+        Keep all descriptions and fields as short as possible to fit more companies in the response.
+        Do NOT use fake names like "Company A" or "Company B". Only use real existing companies that could be potential clients. Respond in English.
+        Make sure that there are at least 30 companies in the response, and that all columns are filled with real data from the companies' official websites.`;
+        // Appel pour le tableau
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${OPENAI_API_KEY}`,
+            },
+            body: JSON.stringify({
+                model: "gpt-4-turbo",
+                messages: [
+                    {
+                        role: "system",
+                        content: "You are an assistant that helps find similar companies.",
+                    },
+                    {
+                        role: "user",
+                        content: userMessage,
+                    },
+                ],
+                max_tokens: 4096,
+                temperature: 0.7,
+            }),
+        });
+
+        if (!response.ok) {
+            let errorDetails = {};
+            try {
+                errorDetails = await response.json();
+            } catch (e) {}
+            console.error("API Error:", errorDetails);
+            throw new Error(errorDetails.error?.message || "Error calling OpenAI API");
+        }
+
+        const data = await response.json();
+        console.log("API Data:", data);
+        console.log("RAW CSV from OpenAI:\n", data.choices[0].message.content); // <-- Ajouté ici
+        const csvContent = data.choices[0].message.content.trim();
+        const parsed = Papa.parse(csvContent, { header: true, delimiter: "|" });
+        let companiesCsv = parsed.data;
+
+        // Liste des colonnes attendues
+        const columns = [
+            "Company Name",
+            "Domain",
+            "Industry",
+            "Location",
+            "Headcount",
+            "Linkedin",
+            "Description",
+            "Company Type",
+            "Keywords",
+            "Technologies",
+            "Ice breaker"
+        ];
+
+        // Filtrer pour ne garder que les entreprises qui ont toutes les infos principales non vides
+        companiesCsv = companiesCsv.filter(company =>
+            columns.every(col => company[col] && company[col].toString().trim() !== "")
+        );
+
+        // Prendre les 10 premières entreprises valides
+        companiesCsv = companiesCsv.slice(0, 50);
+
+        // Générer le CSV propre à sauvegarder côté backend
+        const cleanCsvContent = [
+            columns.join("|"),
+            ...companiesCsv.map(company => columns.map(col => company[col]).join("|"))
+        ].join("\n");
+
+        // Affichage du tableau HTML
+        // ...dans searchSimilarCompanies...
+        resultsBody.innerHTML = "";
+        companiesCsv.forEach(company => {
+            const row = document.createElement("tr");
+            columns.forEach(col => {
+                const cell = document.createElement("td");
+                if (col === "Company Name") {
+                    const link = document.createElement("a");
+                    link.textContent = company[col] || "";
+                    link.href = `details.html?company=${encodeURIComponent(company["Company Name"])}`;
+                    link.style.color = "#1565c0";
+                    link.style.textDecoration = "underline";
+                    cell.appendChild(link);
+                } else if (col === "Linkedin") {
+                    const linkedinUrl = company[col] || "";
+                    if (
+                        linkedinUrl &&
+                        linkedinUrl !== "#" &&
+                        !linkedinUrl.toLowerCase().includes("unavailable")
+                    ) {
+                        const link = document.createElement("a");
+                        link.textContent = linkedinUrl;
+                        link.href = linkedinUrl.startsWith("http") ? linkedinUrl : "https://" + linkedinUrl;
+                        link.target = "_blank";
+                        link.style.color = "#1565c0";
+                        link.style.textDecoration = "underline";
+                        cell.appendChild(link);
+                    } else {
+                        cell.textContent = "";
+                    }
+                } else if (col === "Domain") {
+                    const domainUrl = company[col] || "";
+                    if (domainUrl) {
+                        const link = document.createElement("a");
+                        link.textContent = domainUrl;
+                        link.href = domainUrl.startsWith("http") ? domainUrl : "https://" + domainUrl;
+                        link.target = "_blank";
+                        link.style.color = "#1565c0";
+                        link.style.textDecoration = "underline";
+                        cell.appendChild(link);
+                    } else {
+                        cell.textContent = "";
+                    }
+                } else {
+                    cell.textContent = company[col] || "";
+                }
+                row.appendChild(cell);
+            });
+            resultsBody.appendChild(row);
+        });
+        resultsTable.style.display = "table";
+        localStorage.setItem("companyTableData", JSON.stringify(companiesCsv));
+        console.log("Results displayed in table.");
+
+        // Envoie le CSV propre au backend pour écraser test.csv
+        fetch('/update_csv', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ csv: cleanCsvContent })
+        })
+        .then(res => res.json())
+        .then(() => {
+            // Optionnel : lancer le script d’enrichissement
+            fetch('/run_enrichment', { method: 'POST' });
+            window.localStorage.setItem("dashboardNeedsRefresh", Date.now());
+        });
+        
+
+
+        const companies = data.choices[0].message.content.trim().split("\n");
+        // Remove header lines if present
+       // Affichage du tableau à partir de companiesCsv (PapaParse)
+        if (!companiesCsv || companiesCsv.length === 0 || !companiesCsv[0]["Company Name"]) {
+            noResults.style.display = "block";
+            console.log("No similar companies found.");
+        } 
+        // Appel pour les conseils (Advices)
+        const advicePrompt =
+            (context ? context + "\n\n" : "") +
+            `Based on the context and the company website "${companyWebsite}", give 3 short and actionable advices in English about which companies to contact first and which have the highest chance of becoming clients. Only output the advices as a numbered list.`;
+
+        const adviceResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${OPENAI_API_KEY}`,
+            },
+            body: JSON.stringify({
+                model: "gpt-4-turbo",
+                messages: [
+                    {
+                        role: "system",
+                        content: "You are an assistant that gives actionable business development advices.",
+                    },
+                    {
+                        role: "user",
+                        content: advicePrompt,
+                    },
+                ],
+                max_tokens: 1000,
+                temperature: 0.7,
+            }),
+        });
+
+        if (adviceResponse.ok) {
+            const adviceData = await adviceResponse.json();
+            const adviceText = adviceData.choices[0].message.content.trim();
+            adviceContent.innerHTML = adviceText.replace(/\n/g, "<br>");
+            adviceSection.style.display = "block";
+            localStorage.setItem("companyAdvices", adviceText);
+        } else {
+            adviceContent.innerHTML = "Unable to fetch advices at this time.";
+            adviceSection.style.display = "block";
+        }
+
+    } catch (error) {
+        console.error("Error:", error);
+        alert(`An error occurred: ${error.message}`);
+    } finally {
+        loader.style.display = "none";
+        console.log("Search finished.");
+    }
+}
+
+// Load data from Local Storage in English
+function loadTableFromLocalStorage() {
+    const resultsTable = document.getElementById("resultsTable");
+    const resultsBody = document.getElementById("resultsBody");
+    const columns = [
+        "Company Name",
+        "Domain",
+        "Industry",
+        "Location",
+        "Headcount",
+        "Linkedin",
+        "Description",
+        "Company Type",
+        "Keywords",
+        "Technologies",
+        "Ice breaker"
+    ];
+    resultsTable.querySelector("thead tr").innerHTML = columns.map(h => `<th>${h}</th>`).join("");
+    const companyData = JSON.parse(localStorage.getItem("companyTableData"));
+
+    resultsBody.innerHTML = "";
+    if (companyData && companyData.length > 0) {
+        companyData.forEach(company => {
+            if (!company["Company Name"]) return;
+            const row = document.createElement("tr");
+            columns.forEach(col => {
+                const cell = document.createElement("td");
+                if (col === "Company Name") {
+                    const link = document.createElement("a");
+                    link.textContent = company[col] || "";
+                    link.href = `details.html?company=${encodeURIComponent(company["Company Name"])}`;
+                    link.style.color = "#1565c0";
+                    link.style.textDecoration = "underline";
+                    cell.appendChild(link);
+                } else if (col === "Linkedin") {
+                    const linkedinUrl = company[col] || "";
+                    if (
+                        linkedinUrl &&
+                        linkedinUrl !== "#" &&
+                        !linkedinUrl.toLowerCase().includes("unavailable")
+                    ) {
+                        const link = document.createElement("a");
+                        link.textContent = linkedinUrl;
+                        link.href = linkedinUrl.startsWith("http") ? linkedinUrl : "https://" + linkedinUrl;
+                        link.target = "_blank";
+                        link.style.color = "#1565c0";
+                        link.style.textDecoration = "underline";
+                        cell.appendChild(link);
+                    } else {
+                        cell.textContent = "";
+                    }
+                } else if (col === "Domain") {
+                    const domainUrl = company[col] || "";
+                    if (domainUrl) {
+                        const link = document.createElement("a");
+                        link.textContent = domainUrl;
+                        link.href = domainUrl.startsWith("http") ? domainUrl : "https://" + domainUrl;
+                        link.target = "_blank";
+                        link.style.color = "#1565c0";
+                        link.style.textDecoration = "underline";
+                        cell.appendChild(link);
+                    } else {
+                        cell.textContent = "";
+                    }
+                } else {
+                    cell.textContent = company[col] || "";
+                }
+                row.appendChild(cell);
+            });
+            resultsBody.appendChild(row);
+        });
+        resultsTable.style.display = "table";
+    } else {
+        resultsTable.style.display = "none";
+    }
+
+    // Affiche les conseils stockés
+    const storedAdvices = localStorage.getItem("companyAdvices");
+    if (storedAdvices) {
+        document.getElementById("adviceContent").innerHTML = storedAdvices.replace(/\n/g, "<br>");
+        document.getElementById("adviceSection").style.display = "block";
+    }
+}
+
+window.onload = loadTableFromLocalStorage;
+
+function handleKeyPress(event) {
+    if (event.key === "Enter") {
+        saveCompany();
+    }
+}
+
+function resetResults() {
+    // Efface les données du tableau et des conseils
+    localStorage.removeItem("companyTableData");
+    localStorage.removeItem("companyAdvices");
+    document.getElementById("resultsBody").innerHTML = "";
+    document.getElementById("resultsTable").style.display = "none";
+    document.getElementById("adviceContent").innerHTML = "";
+    document.getElementById("adviceSection").style.display = "none";
+    document.getElementById("noResults").style.display = "none";
+}
+</script>
+<!-- ...existing code... -->
+
+</body>
+
+</html> 
+</body>
+</html>
