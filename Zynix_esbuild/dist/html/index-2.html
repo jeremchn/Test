@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-width="fullwidth" data-menu-styles="light" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> ZYNIX - Bootstrap 5 Premium Admin & Dashboard Template </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Wcsrm Software Private Limited">
+	<meta name="keywords" content="bootstrap template, admin panel bootstrap, bootstrap dashboard, admin, admin dashboard template, dashboard template, html css templates, dashboard, template dashboard,  bootstrap dashboard template, dashboard html css, bootstrap admin dashboard,  bootstrap admin, dashboard template, bootstrap5 admin template">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Main Theme Js -->
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="../assets/css/styles.css" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet" > 
+
+    <!-- Simplebar Css -->
+    <link href="../assets/libs/simplebar/simplebar.min.css" rel="stylesheet" >
+    
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- FlatPickr CSS -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+
+    <!-- Auto Complete CSS -->
+    <link rel="stylesheet" href="../assets/libs/@tarekraafat/autocomplete.js/css/autoComplete.css">
+
+
+<link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+
+    <!-- Start Switcher -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header border-bottom d-block p-0">
+        <div class="d-flex align-items-center justify-content-between p-3">
+            <h5 class="offcanvas-title text-default" id="offcanvasRightLabel">Switcher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <nav class="border-top border-block-start-dashed">
+            <div class="nav nav-tabs nav-justified" id="switcher-main-tab" role="tablist">
+                <button class="nav-link active" id="switcher-home-tab" data-bs-toggle="tab" data-bs-target="#switcher-home"
+                    type="button" role="tab" aria-controls="switcher-home" aria-selected="true">Theme Styles</button>
+                <button class="nav-link" id="switcher-profile-tab" data-bs-toggle="tab" data-bs-target="#switcher-profile"
+                    type="button" role="tab" aria-controls="switcher-profile" aria-selected="false">Theme Colors</button>
+            </div>
+        </nav>
+    </div>
+    <div class="offcanvas-body">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active border-0" id="switcher-home" role="tabpanel" aria-labelledby="switcher-home-tab"
+                tabindex="0">
+                <div class="">
+                    <p class="switcher-style-head">Theme Color Mode:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-light-theme">
+                                    Light
+                                </label>
+                                <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-dark-theme">
+                                    Dark
+                                </label>
+                                <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Directions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-ltr">
+                                    LTR
+                                </label>
+                                <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-rtl">
+                                    RTL
+                                </label>
+                                <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Navigation Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-vertical">
+                                    Vertical
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-style" id="switcher-vertical"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-horizontal">
+                                    Horizontal
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-style"
+                                    id="switcher-horizontal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-menu-styles">
+                    <p class="switcher-style-head">Vertical & Horizontal Menu Styles:</p>
+                    <div class="row switcher-style gx-0 pb-2 gy-2">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-click">
+                                    Menu Click
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-menu-click">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-hover">
+                                    Menu Hover
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-menu-hover">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-click">
+                                    Icon Click
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-icon-click">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-hover">
+                                    Icon Hover
+                                </label>
+                                <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                    id="switcher-icon-hover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidemenu-layout-styles">
+                    <p class="switcher-style-head">Sidemenu Layout Styles:</p>
+                    <div class="row switcher-style gx-0 pb-2 gy-2">
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-default-menu">
+                                    Default Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-default-menu" checked>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-closed-menu">
+                                    Closed Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-closed-menu">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icontext-menu">
+                                    Icon Text
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-icontext-menu">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-icon-overlay">
+                                    Icon Overlay
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-icon-overlay">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-detached">
+                                    Detached
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-detached">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-double-menu">
+                                    Double Menu
+                                </label>
+                                <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                    id="switcher-double-menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Page Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-regular">
+                                    Regular
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-regular"
+                                checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-classic">
+                                    Classic
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-classic">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-modern">
+                                    Modern
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-styles" id="switcher-modern">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Layout Width Styles:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-default-width">
+                                    compact
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-default-width"
+                                   >
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-full-width">
+                                    Full Width
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-full-width"  checked>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-boxed">
+                                    Boxed
+                                </label>
+                                <input class="form-check-input" type="radio" name="layout-width" id="switcher-boxed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Menu Positions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-fixed">
+                                    Fixed
+                                </label>
+                                <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-fixed"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-menu-scroll">
+                                    Scrollable
+                                </label>
+                                <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-scroll">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Header Positions:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-header-fixed">
+                                    Fixed
+                                </label>
+                                <input class="form-check-input" type="radio" name="header-positions"
+                                    id="switcher-header-fixed" checked>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-header-scroll">
+                                    Scrollable
+                                </label>
+                                <input class="form-check-input" type="radio" name="header-positions"
+                                    id="switcher-header-scroll">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="switcher-style-head">Loader:</p>
+                    <div class="row switcher-style gx-0">
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-loader-enable">
+                                    Enable
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-loader"
+                                    id="switcher-loader-enable">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check switch-select">
+                                <label class="form-check-label" for="switcher-loader-disable">
+                                    Disable
+                                </label>
+                                <input class="form-check-input" type="radio" name="page-loader"
+                                    id="switcher-loader-disable" checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade border-0" id="switcher-profile" role="tabpanel" aria-labelledby="switcher-profile-tab" tabindex="0">
+                <div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Menu Colors:</p>
+                        <div class="d-flex switcher-style pb-2">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Light Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-light" checked>
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Dark Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-dark">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Color Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Gradient Menu" type="radio" name="menu-colors"
+                                    id="switcher-menu-gradient">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-transparent"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Transparent Menu"
+                                    type="radio" name="menu-colors" id="switcher-menu-transparent">
+                            </div>
+                        </div>
+                        <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Menu dynamically change from below Theme Primary color picker</div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Header Colors:</p>
+                        <div class="d-flex switcher-style pb-2">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Light Header" type="radio" name="header-colors"
+                                    id="switcher-header-light" checked>
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Dark Header" type="radio" name="header-colors"
+                                    id="switcher-header-dark">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Color Header" type="radio" name="header-colors"
+                                    id="switcher-header-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Gradient Header" type="radio" name="header-colors"
+                                    id="switcher-header-gradient">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-transparent" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Transparent Header" type="radio" name="header-colors"
+                                    id="switcher-header-transparent">
+                            </div>
+                        </div>
+                        <div class="px-4 pb-3 text-muted fs-11">Note:If you want to change color Header dynamically change from below Theme Primary color picker</div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Theme Primary:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-1" type="radio"
+                                    name="theme-primary" id="switcher-primary">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-2" type="radio"
+                                    name="theme-primary" id="switcher-primary1">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                                    id="switcher-primary2">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                                    id="switcher-primary3">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                                    id="switcher-primary4">
+                            </div>
+                            <div class="form-check switch-select ps-0 mt-1 color-primary-light">
+                                <div class="theme-container-primary"></div>
+                                <div class="pickr-container-primary"  onchange="updateChartColor(this.value)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-colors">
+                        <p class="switcher-style-head">Theme Background:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-1" type="radio"
+                                    name="theme-background" id="switcher-background">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-2" type="radio"
+                                    name="theme-background" id="switcher-background1">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-3" type="radio" name="theme-background"
+                                    id="switcher-background2">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-4" type="radio"
+                                    name="theme-background" id="switcher-background3">
+                            </div>
+                            <div class="form-check switch-select me-3">
+                                <input class="form-check-input color-input color-bg-5" type="radio"
+                                    name="theme-background" id="switcher-background4">
+                            </div>
+                            <div class="form-check switch-select ps-0 mt-1 tooltip-static-demo color-bg-transparent">
+                                <div class="theme-container-background"></div>
+                                <div class="pickr-container-background"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-image mb-3">
+                        <p class="switcher-style-head">Menu With Background Image:</p>
+                        <div class="d-flex flex-wrap align-items-center switcher-style">
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img1" type="radio"
+                                    name="menu-background" id="switcher-bg-img">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img2" type="radio"
+                                    name="menu-background" id="switcher-bg-img1">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img3" type="radio" name="menu-background"
+                                    id="switcher-bg-img2">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img4" type="radio"
+                                    name="menu-background" id="switcher-bg-img3">
+                            </div>
+                            <div class="form-check switch-select m-2">
+                                <input class="form-check-input bgimage-input bg-img5" type="radio"
+                                    name="menu-background" id="switcher-bg-img4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block canvas-footer flex-wrap">
+                <a href="javascript:void(0);" id="reset-all" class="btn btn-danger m-1 w-100">Reset</a> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Switcher -->
+
+
+     <!-- Loader -->
+<div id="loader" >
+    <img src="../assets/images/media/loader.svg" alt="">
+</div>
+<!-- Loader -->
+    <div class="page">        
+         <!-- Start::app-sidebar -->
+<aside class="app-sidebar sticky" id="sidebar">
+
+    <!-- Start::main-sidebar-header -->
+    <div class="main-sidebar-header">
+        <a href="index.html" class="header-logo">
+            <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+            <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+            <img src="../assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
+            <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+        </a>
+    </div>
+    <!-- End::main-sidebar-header -->
+
+    <!-- Start::main-sidebar -->
+    <div class="main-sidebar" id="sidebar-scroll">
+
+        <!-- Start::nav -->
+        <nav class="main-menu-container nav nav-pills flex-column sub-open">
+            <div class="slide-left" id="slide-left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg>
+            </div>
+            <!-- ...avant... -->
+<ul class="main-menu">
+    <!-- SUPPRIMER TOUT CE QUI CONCERNE DASHBOARDS ICI -->
+    <!-- SUPPRIMER la section Dashboards (category + bloc li) -->
+    <!-- SUPPRIMER les autres sections que tu ne veux pas garder -->
+
+    <!-- Garde uniquement les sections suivantes : -->
+
+    <!-- Start::slide__category -->
+    <li class="slide__category"><span class="category-name">Modules</span></li>
+    <!-- End::slide__category -->
+
+    <!-- Companies -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <rect x="48" y="48" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="144" y="48" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="48" y="144" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <rect x="144" y="144" width="64" height="64" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+            </svg>
+            <span class="side-menu__label">Companies</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="gallery.html" class="side-menu__item">Find Companies</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Accounting -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Accounting</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide side-menu__label1">
+                <a href="javascript:void(0)">Accounting</a>
+            </li>
+            <li class="slide">
+                <a href="index-2.html" class="side-menu__item">Invoicing</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Module 3 -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Module 3</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="index.html" class="side-menu__item">Sales</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+
+    <!-- Context -->
+    <li class="slide has-sub">
+        <a href="javascript:void(0);" class="side-menu__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"/>
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/>
+                <line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                <circle cx="128" cy="172" r="12"/>
+            </svg>
+            <span class="side-menu__label">Context</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu child1">
+            <li class="slide">
+                <a href="context.html" class="side-menu__item">Context</a>
+            </li>
+        </ul>
+    </li>
+    <!-- End::slide -->
+</ul>
+<!-- ...après... -->
+            <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
+        </nav>
+        <!-- End::nav -->
+
+    </div>
+    <!-- End::main-sidebar -->
+
+</aside>
+<!-- End::app-sidebar -->
+<body>
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-xxl-6 offset-xxl-3 col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <div class="card custom-card">
+                <div class="card-header">
+                    <div class="card-title">
+                        Generate PDF Invoices
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p>Drag and drop a CSV file here or click the button to browse your files.</p>
+                    <input type="file" id="csv-upload" accept=".csv" class="d-none">
+                    <button id="upload-btn" class="btn btn-primary btn-wave">
+                        <i class="ti ti-upload align-middle"></i> Import CSV File
+                    </button>
+                    <div id="upload-area" class="border border-dashed p-3 mt-3">
+                        <p class="text-muted">Drop your CSV file here</p>
+                    </div>
+                    <div id="pdf-list" class="mt-4">
+                        <!-- Generated PDF files will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const uploadBtn = document.getElementById('upload-btn');
+            const csvUpload = document.getElementById('csv-upload');
+            const uploadArea = document.getElementById('upload-area');
+            const pdfList = document.getElementById('pdf-list'); // Container to display generated PDFs
+
+            // Open file selector when the button is clicked
+            uploadBtn.addEventListener('click', () => csvUpload.click());
+
+            // Handle drag-and-drop
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('border-primary');
+            });
+
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('border-primary');
+            });
+
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('border-primary');
+                const file = e.dataTransfer.files[0];
+                if (file && file.type === 'text/csv') {
+                    processCSV(file);
+                } else {
+                    alert('Please drop a valid CSV file.');
+                }
+            });
+
+            // Handle file upload via button
+            csvUpload.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file && file.type === 'text/csv') {
+                    processCSV(file);
+                } else {
+                    alert('Please select a valid CSV file.');
+                }
+            });
+
+            // Function to process the CSV file
+            async function processCSV(file) {
+                try {
+                    const reader = new FileReader();
+                    reader.onload = async (e) => {
+                        const csvText = e.target.result;
+                        const rows = csvText.split('\n').slice(1); // Skip the header
+
+                        // Reset the PDF list
+                        pdfList.innerHTML = '';
+
+                        for (const row of rows) {
+                            const columns = row.split(',');
+                            if (columns.length >= 7) {
+                                const invoiceData = {
+                                    companyName: columns[0].trim(),
+                                    address: columns[1].trim(),
+                                    email: columns[2].trim(),
+                                    vatNumber: columns[3].trim(),
+                                    description: columns[4].trim(),
+                                    amountHT: parseFloat(columns[5]),
+                                    vatRate: parseFloat(columns[6]),
+                                };
+                                const pdfBytes = await generatePDF(invoiceData);
+
+                                // Create a link to download the PDF
+                                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                                const url = URL.createObjectURL(blob);
+                                const link = document.createElement('a');
+                                link.href = url;
+                                link.download = `Invoice_${invoiceData.companyName}.pdf`;
+                                link.className = 'btn btn-link btn-sm me-2';
+                                link.style.color = '#6f42c1'; // Violet text
+
+                                // Add text and icon to the link
+                                link.innerHTML = `
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>
+                                    <span>Download Invoice: ${invoiceData.companyName}</span>
+                                `;
+
+                                // Create a button to send the invoice
+                                const sendButton = document.createElement('button');
+                                sendButton.className = 'btn btn-outline-primary btn-sm';
+                                sendButton.style.borderColor = '#6f42c1'; // Violet border
+                                sendButton.style.color = '#6f42c1'; // Violet text
+                                sendButton.innerHTML = `
+                                    <i class="ti ti-mail align-middle me-2"></i>
+                                    Send Invoice to Client
+                                `;
+                                sendButton.addEventListener('click', () => {
+                                    alert(`Invoice sent to ${invoiceData.email}`);
+                                    // Add your email-sending logic here
+                                });
+
+                                // Create a container for the entire row
+                                const container = document.createElement('div');
+                                container.className = 'd-flex align-items-center justify-content-between p-3 mb-2';
+                                container.style.border = '2px solid #6f42c1'; // Violet border
+                                container.style.backgroundColor = '#ffffff'; // White background
+                                container.style.color = '#6f42c1'; // Violet text
+                                container.style.borderRadius = '5px'; // Rounded corners
+                                container.style.width = '100%'; // Full width
+
+                                // Add the link and button to the container
+                                container.appendChild(link);
+                                container.appendChild(sendButton);
+
+                                // Add the container to the PDF list
+                                pdfList.appendChild(container);
+                            }
+                        }
+                    };
+                    reader.readAsText(file);
+                } catch (error) {
+                    console.error('Error processing the CSV file:', error);
+                    alert('An error occurred while processing the CSV file.');
+                }
+            }
+            // Function to wrap text into multiple lines based on a maximum length
+            function wrapText(text, maxLength) {
+                const words = text.split(' ');
+                const lines = [];
+                let currentLine = '';
+
+                words.forEach((word) => {
+                    if ((currentLine + word).length <= maxLength) {
+                        currentLine += (currentLine ? ' ' : '') + word;
+                    } else {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    }
+                });
+
+                if (currentLine) {
+                    lines.push(currentLine);
+                }
+
+                return lines;
+            }
+
+            // Function to generate a PDF with a professional layout
+            async function generatePDF(data) {
+                try {
+                    const { PDFDocument, rgb } = PDFLib;
+
+                    // Create a new PDF document
+                    const pdfDoc = await PDFDocument.create();
+                    const page = pdfDoc.addPage([600, 800]);
+
+                    // Define styles
+                    const fontSize = 12;
+                    const margin = 50;
+
+                    // Colors
+                    const headerColor = rgb(0.1, 0.2, 0.5); // Blue for header
+                    const textColor = rgb(0, 0, 0); // Black for text
+
+                    // Load the logo image
+                    const logoUrl = './Alruqee.png'; // Path to the logo in the V1 folder
+                    const logoBytes = await fetch(logoUrl).then((res) => res.arrayBuffer());
+                    const logoImage = await pdfDoc.embedPng(logoBytes); // Use embedPng for PNG files
+                    const logoDims = logoImage.scale(0.3); // Scale the logo to fit
+
+                    // Draw the logo on the PDF (top-right corner)
+                    page.drawImage(logoImage, {
+                        x: 400, // Position the logo to the right
+                        y: 620, // Position the logo at the top
+                        width: logoDims.width,
+                        height: logoDims.height,
+                    });
+
+                    // Add header text (top-left corner)
+                    page.drawText("INVOICE", {
+                        x: margin,
+                        y: 765,
+                        size: 20,
+                        color: headerColor,
+                    });
+
+                    // Add provider information (below the header)
+                    page.drawText(`Provider: ${PROVIDER_NAME}`, { x: margin, y: 720, size: fontSize, color: textColor });
+                    page.drawText(`Address: ${PROVIDER_ADDRESS}`, { x: margin, y: 700, size: fontSize, color: textColor });
+                    page.drawText(`Email: ${PROVIDER_EMAIL}`, { x: margin, y: 680, size: fontSize, color: textColor });
+
+                    // Add client information (left side)
+                    page.drawText("Bill To:", { x: margin, y: 640, size: fontSize, color: headerColor });
+
+                    let currentY = 620; // Start position for client details
+
+                    // Add client name
+                    page.drawText(`Name: ${data.companyName || "Not specified"}`, { x: margin, y: currentY, size: fontSize, color: textColor });
+                    currentY -= 20; // Move down for the next line
+
+                    // Force address to be on a single line by removing line breaks
+                    const singleLineAddress = (data.address || "Not specified").replace(/\n/g, ' ').replace(/"/g, '');
+                    page.drawText(`Address: ${singleLineAddress}`, { x: margin, y: currentY, size: fontSize, color: textColor });
+                    currentY -= 20; // Move down for the next line
+
+                    // Add email
+                    const email = (data.email || "Not specified").replace(/"/g, ''); // Remove quotes if present
+                    page.drawText(`Email: ${email}`, { x: margin, y: currentY, size: fontSize, color: textColor });
+                    currentY -= 20; // Move down for the next line
+
+                    // Add VAT number
+                    page.drawText(`VATnumber: ${data.vatNumber || "Not specified"}`, { x: margin, y: currentY, size: fontSize, color: textColor });
+                    currentY -= 20; // Move down for the next line
+                    // Add invoice details table
+                    const tableStartY = currentY - 40;
+                    const tableRowHeight = 20;
+
+                    // Table header
+                    page.drawRectangle({
+                        x: margin,
+                        y: tableStartY,
+                        width: 500,
+                        height: tableRowHeight,
+                        color: headerColor,
+                    });
+                    page.drawText("Description", { x: margin + 10, y: tableStartY + 5, size: fontSize, color: rgb(1, 1, 1) });
+                    page.drawText("Amount HT (€)", { x: margin + 250, y: tableStartY + 5, size: fontSize, color: rgb(1, 1, 1) });
+                    page.drawText("VAT (%)", { x: margin + 350, y: tableStartY + 5, size: fontSize, color: rgb(1, 1, 1) });
+                    page.drawText("Total (€)", { x: margin + 450, y: tableStartY + 5, size: fontSize, color: rgb(1, 1, 1) });
+
+                    // Table content
+                    const amountHT = parseFloat(data.amountHT) || 0; // Extract "Montant HT" from CSV
+                    const vatRate = parseFloat(data.vatRate) || 0; // Extract "Taux de TVA (%)" from CSV
+                    const vatAmount = (amountHT * vatRate) / 100; // Calculate VAT amount
+                    const totalAmount = amountHT + vatAmount; // Calculate total amount
+
+                    // Draw table content
+                    // Wrap the description to fit within the column width
+                    const descriptionLines = wrapText(data.description || "Not specified", 30); // Adjust the max length per line as needed
+                    let descriptionY = tableStartY - 20; // Start position for the description
+
+                    descriptionLines.forEach((line) => {
+                        page.drawText(line, { x: margin + 10, y: descriptionY, size: fontSize, color: textColor });
+                        descriptionY -= 15; // Move down for the next line
+                    });
+                   
+                    page.drawText(amountHT.toFixed(2), { x: margin + 250, y: tableStartY - 20, size: fontSize, color: textColor });
+                    page.drawText(vatRate.toFixed(2) + " %", { x: margin + 350, y: tableStartY - 20, size: fontSize, color: textColor });
+                    page.drawText(totalAmount.toFixed(2), { x: margin + 450, y: tableStartY - 20, size: fontSize, color: textColor });
+
+                    // Add summary (below the table)
+                    const summaryStartY = tableStartY - 100;
+                    page.drawText("Summary:", { x: margin, y: summaryStartY, size: fontSize, color: headerColor });
+                    page.drawText(`Amount HT: ${data.amountHT.toFixed(2)} €`, { x: margin, y: summaryStartY - 20, size: fontSize, color: textColor });
+                    page.drawText(`VAT (${data.vatRate}%): ${vatAmount.toFixed(2)} €`, { x: margin, y: summaryStartY - 40, size: fontSize, color: textColor });
+                    page.drawText(`Total Amount: ${totalAmount.toFixed(2)} €`, { x: margin, y: summaryStartY - 60, size: fontSize, color: textColor });
+
+                    // Add footer (bottom of the page)
+                    page.drawText("Thank you for your business!", { x: margin, y: 30, size: fontSize, color: headerColor });
+
+                    // Save the PDF and return the bytes
+                    return await pdfDoc.save();
+                } catch (error) {
+                    console.error("Error generating the PDF:", error);
+                    alert("An error occurred while generating the PDF.");
+                }
+            }
+
+            // Provider information
+            const PROVIDER_NAME = "Alruqee";
+            const PROVIDER_ADDRESS = "Alkhobar 31952. Kingdom of Saudi Arabia.";
+            const PROVIDER_EMAIL = "mailbox@alruqee.com ";
+        });
+    </script>
+    <!-- Scroll To Top -->
+<div class="scrollToTop">
+    <span class="arrow lh-1"><i class="ti ti-arrow-big-up fs-16"></i></span>
+</div>
+<div id="responsive-overlay"></div>
+<!-- Scroll To Top -->
+
+<!-- Popper JS -->
+<script src="../assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Defaultmenu JS -->
+<script src="../assets/js/defaultmenu.min.js"></script>
+
+<!-- Node Waves JS-->
+<script src="../assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Sticky JS -->
+<script src="../assets/js/sticky.js"></script>
+
+<!-- Simplebar JS -->
+<script src="../assets/libs/simplebar/simplebar.min.js"></script>
+<script src="../assets/js/simplebar.js"></script>
+
+<!-- Auto Complete JS -->
+<script src="../assets/libs/@tarekraafat/autocomplete.js/autoComplete.min.js"></script>
+
+<!-- Color Picker JS -->
+<script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+<!-- Date & Time Picker JS -->
+<script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Crypto Dashboard --> 
+    <script src="../assets/js/crypto-dashboard.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+ 
+   
+<!-- Custom-Switcher JS -->
+<script src="../assets/js/custom-switcher.min.js"></script>
+    
+</body>
+
+</html> 
+</body>
+</html>
+</body>
+</html>

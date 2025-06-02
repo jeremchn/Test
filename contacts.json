@@ -1,0 +1,834 @@
+[
+    {
+        "Company":"Chewy",
+        "Email":"jvanzile@chewy.com",
+        "First Name":"Jon",
+        "Last Name":"Vanzile",
+        "Position":"Editor-in-Chief",
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"kdurkin@chewy.com",
+        "First Name":"Kelli",
+        "Last Name":"Durkin",
+        "Position":"Director of Customer Service",
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"jhass@chewy.com",
+        "First Name":"Joanna",
+        "Last Name":"Haß",
+        "Position":"Associate Director of Communications",
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"blipperini@chewy.com",
+        "First Name":"Brooke",
+        "Last Name":"Lipperini",
+        "Position":"Senior Human Resources Manager",
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"ir@chewy.com",
+        "First Name":"Isuet",
+        "Last Name":"Ribot",
+        "Position":"Customer Service Representative",
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"sloweth@chewy.com",
+        "First Name":"Samantha",
+        "Last Name":"Loweth",
+        "Position":"Recruiting Manager",
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"hr@chewy.com",
+        "First Name":"Robb",
+        "Last Name":"Hohbein",
+        "Position":"Warehouse Associate",
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"dpelkey@chewy.com",
+        "First Name":"Diane",
+        "Last Name":"Pelkey",
+        "Position":"Media Contact",
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"support@chewy.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"Chewy",
+        "Email":"corporate@chewy.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"chewy.com"
+    },
+    {
+        "Company":"FurHaven",
+        "Email":"mcarr@furhaven.com",
+        "First Name":"Mike",
+        "Last Name":"Carr",
+        "Position":"Chief Technology Officer",
+        "Domain":"furhaven.com"
+    },
+    {
+        "Company":"FurHaven",
+        "Email":"jgablehouse@furhaven.com",
+        "First Name":"Jaynie",
+        "Last Name":"Gablehouse",
+        "Position":"Director of Product Development",
+        "Domain":"furhaven.com"
+    },
+    {
+        "Company":"FurHaven",
+        "Email":"eheilborn@furhaven.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"furhaven.com"
+    },
+    {
+        "Company":"FurHaven",
+        "Email":"service@furhaven.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"furhaven.com"
+    },
+    {
+        "Company":"FurHaven",
+        "Email":"hello@furhaven.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"furhaven.com"
+    },
+    {
+        "Company":"FurHaven",
+        "Email":"hr_pa@furhaven.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"furhaven.com"
+    },
+    {
+        "Company":"Petzey",
+        "Email":"ameetess@petzey.com",
+        "First Name":"Ameetess",
+        "Last Name":"Dira",
+        "Position":"Chief Marketing Officer",
+        "Domain":"petzey.com"
+    },
+    {
+        "Company":"Petzey",
+        "Email":"bourdon@petzey.com",
+        "First Name":"Cameron",
+        "Last Name":"Bourdon",
+        "Position":"Vice President of Sales",
+        "Domain":"petzey.com"
+    },
+    {
+        "Company":"Petzey",
+        "Email":"sydney@petzey.com",
+        "First Name":"Sydney",
+        "Last Name":"Wiederkehr",
+        "Position":"Marketing Coordinator",
+        "Domain":"petzey.com"
+    },
+    {
+        "Company":"Petzey",
+        "Email":"bruna@petzey.com",
+        "First Name":"Bruna",
+        "Last Name":"Maradei",
+        "Position":"Marketing Manager",
+        "Domain":"petzey.com"
+    },
+    {
+        "Company":"Petzey",
+        "Email":"support@petzey.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"petzey.com"
+    },
+    {
+        "Company":"Petzey",
+        "Email":"marketing@petzey.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"petzey.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"ernesto.vasquez@petco.com",
+        "First Name":"Ernesto",
+        "Last Name":"Vasquez",
+        "Position":"Regional Director of Operations",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"diane.balle@petco.com",
+        "First Name":"Karyn",
+        "Last Name":"Zavaleta",
+        "Position":"Medical Director",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"randy.blackburn@petco.com",
+        "First Name":"Randy",
+        "Last Name":"Blackburn",
+        "Position":"Human Resources Director",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"brandon.ruiz@petco.com",
+        "First Name":"Brandon",
+        "Last Name":"Ruiz",
+        "Position":"Senior Director, Pet Services",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"nicholas.haugen@petco.com",
+        "First Name":"Nicholas",
+        "Last Name":"Haugen",
+        "Position":"First Assistant Director",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"dolly.polly@petco.com",
+        "First Name":"Dolly",
+        "Last Name":"Polly",
+        "Position":"Executive Assistant",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"jaclyn.howells@petco.com",
+        "First Name":"Jaclyn",
+        "Last Name":"Howells",
+        "Position":"Director of Veterinary Services",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"lorenzo.urizar@petco.com",
+        "First Name":"Lorenzo",
+        "Last Name":"Urizar",
+        "Position":"Director of Finance",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"chris.lawson@petco.com",
+        "First Name":"Chris",
+        "Last Name":"Lawson",
+        "Position":"Senior Director, Digital Fulfillment",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"PetCo",
+        "Email":"jeremy.happach@petco.com",
+        "First Name":"Jeremy",
+        "Last Name":"Happach",
+        "Position":"Senior Director of Inventory Management",
+        "Domain":"petco.com"
+    },
+    {
+        "Company":"Dogily",
+        "Email":"smile@dogily.in",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"dogily.in"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"egray@petsmart.com",
+        "First Name":"Edward",
+        "Last Name":"Gray",
+        "Position":"Custodial Manager",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"jwood@petsmart.com",
+        "First Name":"Julie",
+        "Last Name":"Wood",
+        "Position":"Executive Assistant",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"monica.hubbard@petsmart.com",
+        "First Name":"Monica",
+        "Last Name":"Hubbard",
+        "Position":"Vice President of Operations",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"d.mcginn@petsmart.com",
+        "First Name":"Dan",
+        "Last Name":"McGinn",
+        "Position":"Director of Information Management",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"lsawyer@petsmart.com",
+        "First Name":"Linda",
+        "Last Name":"Sawyer",
+        "Position":"Pet Trainer",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"mwenzel@petsmart.com",
+        "First Name":"Matthew",
+        "Last Name":"Wenzel",
+        "Position":"Retail Associate",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"ccasey@petsmart.com",
+        "First Name":"Chloe",
+        "Last Name":"Casey",
+        "Position":"Pet Groomer",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"mlarson@petsmart.com",
+        "First Name":"Mike",
+        "Last Name":"Larson",
+        "Position":"Finance Manager",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"jane@petsmart.com",
+        "First Name":"Jan",
+        "Last Name":"Estuesta",
+        "Position":"Associate Lead",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"PetSmart",
+        "Email":"anthonyp@petsmart.com",
+        "First Name":"Anthony",
+        "Last Name":"Perry",
+        "Position":"Customer Engagement Manager",
+        "Domain":"petsmart.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"bill@wildone.com",
+        "First Name":"Bill",
+        "Last Name":"Wells",
+        "Position":"CEO",
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"veronica@wildone.com",
+        "First Name":"Veronica",
+        "Last Name":"Becchetti",
+        "Position":"Chief Supply Chain Officer",
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"partnerships@wildone.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"help@wildone.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"accessibility@wildone.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"press@wildone.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"info@wildone.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"sales@wildone.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"corey@wildone.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Wild One",
+        "Email":"hello@wildone.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"wildone.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"fan@petlibro.com",
+        "First Name":"Fan",
+        "Last Name":"Wang",
+        "Position":"Chief Technology Officer",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"joon@petlibro.com",
+        "First Name":"Joon",
+        "Last Name":"Lee",
+        "Position":"Chief Revenue Officer",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"henna@petlibro.com",
+        "First Name":"Henna",
+        "Last Name":"Sherzai",
+        "Position":"Vice President of Brand",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"york@petlibro.com",
+        "First Name":"York",
+        "Last Name":"Wu",
+        "Position":"CEO",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"georgia@petlibro.com",
+        "First Name":"Georgia",
+        "Last Name":"Shang",
+        "Position":"Marketing Director",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"candice@petlibro.com",
+        "First Name":"Candice",
+        "Last Name":"Aman",
+        "Position":"Senior Manager",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"anthony@petlibro.com",
+        "First Name":"Anthony",
+        "Last Name":"Limongiello",
+        "Position":"Growth Marketing Manager",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"tierney@petlibro.com",
+        "First Name":"Tierney",
+        "Last Name":"Saint-Aubin",
+        "Position":"Senior Director of Global Brand Marketing",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"jeh@petlibro.com",
+        "First Name":"Jeh",
+        "Last Name":"Lin",
+        "Position":"General Manager",
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Petlibro",
+        "Email":"marketing@petlibro.com",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"petlibro.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"melis@butternutbox.com",
+        "First Name":"Melis",
+        "Last Name":"Kahya",
+        "Position":"Board Member",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"niall@butternutbox.com",
+        "First Name":"Niall",
+        "Last Name":"Paterson",
+        "Position":"Chief Technology Officer",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"claire@butternutbox.com",
+        "First Name":"Claire",
+        "Last Name":"Creedon",
+        "Position":"Director of People",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"marco@butternutbox.com",
+        "First Name":"Marco",
+        "Last Name":"Attanasio",
+        "Position":"Supply Chain Director",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"james@butternutbox.com",
+        "First Name":"James",
+        "Last Name":"McCrea",
+        "Position":"Chief Operating Officer",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"charlotte@butternutbox.com",
+        "First Name":"Charlotte",
+        "Last Name":"McCormack",
+        "Position":"Director of Product Development",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"raoul@butternutbox.com",
+        "First Name":"Raoul",
+        "Last Name":"Buijs",
+        "Position":"Head of Growth",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"eleanor@butternutbox.com",
+        "First Name":"Eleanor",
+        "Last Name":"Broderick",
+        "Position":"Head of Product Design",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"jyoti@butternutbox.com",
+        "First Name":"Ajay",
+        "Last Name":"Rayudu",
+        "Position":"Owner",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Butternut Box",
+        "Email":"rachel@butternutbox.com",
+        "First Name":"Rachel",
+        "Last Name":"Jeans",
+        "Position":"Head of Product Management",
+        "Domain":"butternutbox.com"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"charlotte@lilyskitchen.co.uk",
+        "First Name":"Charlotte",
+        "Last Name":"Jost",
+        "Position":"Director of Sustainability",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"ian@lilyskitchen.co.uk",
+        "First Name":"Ian",
+        "Last Name":"Wardle",
+        "Position":"Finance Director",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"cassie@lilyskitchen.co.uk",
+        "First Name":"Cassie",
+        "Last Name":"Mower",
+        "Position":"Quality Manager",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"kate@lilyskitchen.co.uk",
+        "First Name":"Kate",
+        "Last Name":"Walker-Collins",
+        "Position":"Chief Customer Officer",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"becca@lilyskitchen.co.uk",
+        "First Name":"Becca",
+        "Last Name":"Kimmins",
+        "Position":"Head of Product Development",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"dan@lilyskitchen.co.uk",
+        "First Name":"Dan",
+        "Last Name":"Kimmins",
+        "Position":"Creative Director",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"rebecca@lilyskitchen.co.uk",
+        "First Name":"Rebecca",
+        "Last Name":"Evans",
+        "Position":"HR Director",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"pablo@lilyskitchen.co.uk",
+        "First Name":"Pablo",
+        "Last Name":"Lalor",
+        "Position":"Head of Ecommerce",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"mark@lilyskitchen.co.uk",
+        "First Name":"Mark",
+        "Last Name":"Zaki",
+        "Position":"Global Marketing Director",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Lily's Kitchen",
+        "Email":"zahra@lilyskitchen.co.uk",
+        "First Name":"Zahra",
+        "Last Name":"Hirji",
+        "Position":"Customer Service Representative",
+        "Domain":"lilyskitchen.co.uk"
+    },
+    {
+        "Company":"Pawness",
+        "Email":"customerservice@shop-pawness.nl",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"shop-pawness.nl"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"r.howarth@petsathome.com",
+        "First Name":"Rob",
+        "Last Name":"Howarth",
+        "Position":"Supply Chain Manager",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"e.dion@petsathome.com",
+        "First Name":"Emma",
+        "Last Name":"Dion",
+        "Position":"Data Protection Officer",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"m.lewis@petsathome.com",
+        "First Name":"Mathew",
+        "Last Name":"Lewis",
+        "Position":"Director of FP&A",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"r.kirby@petsathome.com",
+        "First Name":"Rebecca",
+        "Last Name":"Kirby",
+        "Position":"Senior Finance Business Partner",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"l.rowley@petsathome.com",
+        "First Name":"Laura",
+        "Last Name":"Rowley",
+        "Position":"Customer Service Director",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"c.wych@petsathome.com",
+        "First Name":"Claire",
+        "Last Name":"Wych",
+        "Position":"Portfolio Manager",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"e.shepherd@petsathome.com",
+        "First Name":"Elise",
+        "Last Name":"Shepherd",
+        "Position":"Head Groomer",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"k.pauling@petsathome.com",
+        "First Name":"Katie",
+        "Last Name":"Pauling",
+        "Position":"Payroll Manager",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"j.reape@petsathome.com",
+        "First Name":"John",
+        "Last Name":"Reape",
+        "Position":"Head of Tax",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Pets at Home",
+        "Email":"d.nixon@petsathome.com",
+        "First Name":"Dave",
+        "Last Name":"Nixon",
+        "Position":"Senior Finance Business Partner",
+        "Domain":"petsathome.com"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"matthias.fuchs@zooplus.de",
+        "First Name":"Matthias",
+        "Last Name":"Fuchs",
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"service@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"impressum@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"socialmedia@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"affiliate@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"nager-kalender@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"redaktion@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"katze-kalender@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"info@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    },
+    {
+        "Company":"Zooplus",
+        "Email":"affiliate.bitiba@zooplus.de",
+        "First Name":null,
+        "Last Name":null,
+        "Position":null,
+        "Domain":"zooplus.de"
+    }
+]
