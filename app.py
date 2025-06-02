@@ -26,6 +26,8 @@ def openai_proxy():
         },
         json=data
     )
+    print("OpenAI status:", response.status_code)
+    print("OpenAI response:", response.text)  # Ajoute ceci pour voir l’erreur exacte
     return jsonify(response.json()), response.status_code
 
 
