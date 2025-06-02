@@ -7,6 +7,14 @@ app = Flask(__name__)
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")  # Mets ta clé dans une variable d'environnement
 
+@app.route('/')
+def index():
+    return send_from_directory('.', 'gallery.html')
+
+@app.route('/Zynix_esbuild/dist/<path:filename>')
+def custom_static(filename):
+    return send_from_directory('Zynix_esbuild/dist', filename)
+
 @app.route('/api/openai', methods=['POST'])
 def openai_proxy():
     data = request.get_json()
