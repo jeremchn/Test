@@ -25,7 +25,8 @@ def openai_proxy():
             "Authorization": f"Bearer {OPENAI_API_KEY}",
             "Content-Type": "application/json"
         },
-        json=data
+        json=data,
+        timeout=60
     )
     print("OpenAI status:", response.status_code)
     print("OpenAI response:", response.text)  # Ajoute ceci pour voir l’erreur exacte
