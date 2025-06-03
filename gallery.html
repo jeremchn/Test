@@ -949,8 +949,8 @@ async function searchSimilarCompanies(companyWebsite) {
         const userMessage =
             (context ? context + "\n\n" : "") +
             `You are a B2B business development assistant.
-        I am looking for 30 real potential client companies similar to the company whose website is: ${companyWebsite}.
-        Use the website and the following context to understand the company's profile and needs: ${context ? context : "No additional context"}.
+        I am looking for 30 real potential client companies similar to the company whose website is: ${companyWebsite}. If you don't find the website or it is not valid, please use the company name instead.
+        Use the website (or only the name of the company) and the following context to understand the company's profile and needs: ${context ? context : "No additional context"}.
 
         For each similar company, research their official website and provide real and up-to-date information for ALL the following columns:
         Company Name, Domain, Industry, Location, Headcount, Linkedin, Description, Company Type, Keywords, Technologies, Ice breaker.
