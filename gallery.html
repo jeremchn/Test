@@ -956,19 +956,9 @@ async function searchSimilarCompanies(companyWebsite) {
 
         Please research and return a list of 5 real companies, filling out the following information for each:
 
-        - Company Name
-        - Domain
-        - Industry (choose only from a set of 5 relevant industries for all companies)
-        - Location
-        - Headcount
-        - LinkedIn URL
-        - Description
-        - Company Type
-        - Keywords
-        - Technologies
-        - Ice breaker (a short personalized sentence for a cold email based on the company's website)
+        Company Name|Domain|Industry|Location|Headcount|LinkedIn URL|Description|Company Type|Keywords|Technologies|Ice breaker
 
-        Format the output as a CSV table using the pipe character "|" as the column separator. The first row should contain the headers. No extra formatting or explanations. Just the CSV output.
+        Format the output as a valid CSV table using the pipe character "|" as the column separator. The first row must contain the headers exactly as above. Do NOT include any separator lines, Markdown, or extra formatting. Do NOT use links or Markdown in any cell, only plain text or URLs. Do NOT add explanations or comments. Only output the CSV table.
 
         Important notes:
         - Choose only 5 distinct industries and assign each company to one of them based on best fit.
@@ -1006,7 +996,17 @@ async function searchSimilarCompanies(companyWebsite) {
         const data = await response.json();
         console.log("API Data:", data);
         console.log("RAW CSV from OpenAI:\n", data.choices[0].message.content); // <-- Ajouté ici
-        const csvContent = data.choices[0].message.content.trim();
+        
+        let csvContent = data.choices[0].message.content.trim();
+
+        // Supprime les lignes de séparation
+        csvContent = csvContent.replace(/^[-| ]+$/gm, "");
+
+        // Remplace les liens Markdown par des URLs simples
+        csvContent = csvContent.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$2");
+
+        // Supprime les lignes vides
+        csvContent = csvContent.replace(/^\s*[\r\n]/gm, "");
         const parsed = Papa.parse(csvContent, { header: true, delimiter: "|" });
         let companiesCsv = parsed.data;
 
