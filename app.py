@@ -6,6 +6,7 @@ import requests  # Assurez-vous d'avoir installé la bibliothèque requests
 app = Flask(__name__)
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")  # Mets ta clé dans une variable d'environnement
+HUNTER_API_KEY = os.environ.get("HUNTER_API_KEY")
 
 @app.route('/')
 def index():
@@ -31,6 +32,19 @@ def openai_proxy():
     return jsonify(response.json()), response.status_code
 
 
+@app.route('/api/hunter', methods=['GET'])
+def hunter_proxy():
+    company = request.args.get('company')
+    response = requests.get(
+        "https://api.hunter.io/v2/domain-search",
+        params={
+            "company": company,
+            "api_key": HUNTER_API_KEY
+        }
+    )
+    return jsonify(response.json()), response.status_code
+
+
 @app.route('/update_csv', methods=['POST'])
 def update_csv():
     data = request.get_json()
@@ -43,10 +57,6 @@ def run_enrichment():
     subprocess.Popen(['python', 'csv_to_df.py'])
     return {'status': 'enrichment started'}
 
-# Sert les fichiers statiques (HTML, JS, CSS, etc.)
-@app.route('/Zynix_esbuild/dist/<path:filename>')
-def serve_dist(filename):
-    return send_from_directory(os.path.join('Zynix_esbuild', 'dist'), filename)
 
 @app.route('/<path:filename>')
 def serve_root_files(filename):

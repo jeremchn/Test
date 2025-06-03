@@ -84,8 +84,7 @@
     </div>
 
     <script>
-    const HUNTER_API_KEY = "2222faabcb33adf838c9f77752b5451af39ce567";
-    const OPENAI_API_KEY = "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";
+    
 
     // Set back button destination based on referrer
     document.addEventListener("DOMContentLoaded", function() {
@@ -114,16 +113,13 @@
 
         try {
             // Hunter API for company contacts
-            const hunterResponse = await fetch(`https://api.hunter.io/v2/domain-search?company=${encodeURIComponent(company)}&api_key=${HUNTER_API_KEY}`);
+            const hunterResponse = await fetch(`/api/hunter?company=${encodeURIComponent(company)}`);
             const hunterData = await hunterResponse.json();
 
             // OpenAI API for company details (in English)
-            const openaiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+            const openaiResponse = await fetch("/api/openai", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${OPENAI_API_KEY}`
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     model: "gpt-3.5-turbo",
                     messages: [
