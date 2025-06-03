@@ -103,7 +103,7 @@
         const company = params.get("company");
         if (!company) return alert("No company specified.");
         // Met à jour le lien "View all" avec le nom de la société
-        document.getElementById("viewAllContacts").href = `contacts.html?company=${encodeURIComponent(company)}`;
+        document.getElementById("viewAllContacts").href = `contacts-bis.html`;
 
         document.getElementById("companyName").textContent = `Company Details: ${company}`;
 
@@ -190,6 +190,12 @@
                     </li>
                 `).join("");
                 contacts.innerHTML = `<ul>${contactList}</ul>`;
+                const contactsWithCompany = hunterData.data.emails.map(email => ({
+                    ...email,
+                    company: company
+                }));
+                window.localStorage.setItem("detailsContacts", JSON.stringify(contactsWithCompany));
+                
             } else {
                 contacts.innerHTML = "<p>No contacts found.</p>";
             }
