@@ -947,21 +947,37 @@ async function searchSimilarCompanies(companyWebsite) {
         const context = localStorage.getItem("companySearchContext") || "";
         // Construit le message utilisateur avec le contexte au début
         const userMessage =
-            (context ? context + "\n\n" : "") +
-            `You are a B2B business development assistant.
-        I am looking for 30 real potential client companies similar to the company whose website is: ${companyWebsite}. If you don't find the website or it is not valid, please use the company name instead.
-        Use the website (or only the name of the company) and the following context to understand the company's profile and needs: ${context ? context : "No additional context"}.
+        (context ? context + "\n\n" : "") +
+        `You are a B2B business development assistant.
 
-        For each similar company, research their official website and provide real and up-to-date information for ALL the following columns:
-        Company Name, Domain, Industry, Location, Headcount, Linkedin, Description, Company Type, Keywords, Technologies, Ice breaker.
+        I am looking for 30 real potential client companies that are similar to the company with the website: ${companyWebsite}. If the website is not available or invalid, please use the company name instead.
 
-        Respond ONLY with a CSV table, using the pipe character "|" as the separator, with the first row as headers.
-        **IMPORTANT: In the Industry column, use at most 5 different industry values for all companies. Choose the 5 most relevant industries for this context and assign each company to the closest one.**
-        In the Ice breaker column, write a short, personalized, and relevant sentence in English that could be used as the opening line of a cold email to this company, based on information found on their website.
-        Do NOT add any separator line (like ---), only the header and the data rows.
-        Keep all descriptions and fields as short as possible to fit more companies in the response.
-        Do NOT use fake names like "Company A" or "Company B". Only use real existing companies that could be potential clients. Respond in English.
-        Make sure that there are at least 30 companies in the response, and that all columns are filled with real data from the companies' official websites.`;
+        Use the website or company name, along with the following context to understand the company's profile and needs: ${context || "No additional context provided"}.
+
+        Please research and return a list of 30 real companies, filling out the following information for each:
+
+        - Company Name
+        - Domain
+        - Industry (choose only from a set of 5 relevant industries for all companies)
+        - Location
+        - Headcount
+        - LinkedIn URL
+        - Description
+        - Company Type
+        - Keywords
+        - Technologies
+        - Ice breaker (a short personalized sentence for a cold email based on the company's website)
+
+        Format the output as a CSV table using the pipe character "|" as the column separator. The first row should contain the headers. No extra formatting or explanations. Just the CSV output.
+
+        Important notes:
+        - Choose only 5 distinct industries and assign each company to one of them based on best fit.
+        - Ensure all companies are real and could be actual B2B leads.
+        - Keep entries concise and relevant.
+        - The Ice breaker should be a short sentence in English that could be used as an intro line in a cold email.
+
+        Avoid placeholders or dummy data. All information must be based on real companies and publicly available data.`;
+
         // Appel pour le tableau
         // ...existing code...
         const response = await fetch("/api/openai", {
