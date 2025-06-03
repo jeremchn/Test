@@ -16,21 +16,29 @@ def index():
 def custom_static(filename):
     return send_from_directory('Zynix_esbuild/dist', filename)
 
+# ...dans app.py...
 @app.route('/api/openai', methods=['POST'])
 def openai_proxy():
     data = request.get_json()
-    response = requests.post(
-        "https://api.openai.com/v1/chat/completions",
-        headers={
-            "Authorization": f"Bearer {OPENAI_API_KEY}",
-            "Content-Type": "application/json"
-        },
-        json=data,
-        timeout=120
-    )
-    print("OpenAI status:", response.status_code)
-    print("OpenAI response:", response.text)  # Ajoute ceci pour voir l’erreur exacte
-    return jsonify(response.json()), response.status_code
+    try:
+        response = requests.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+                "Content-Type": "application/json"
+            },
+            json=data,
+            timeout=30
+        )
+        print("OpenAI status:", response.status_code)
+        print("OpenAI response:", response.text)
+        return jsonify(response.json()), response.status_code
+    except requests.exceptions.Timeout:
+        print("OpenAI API timeout")
+        return jsonify({"error": {"message": "OpenAI API timeout"}}), 504
+    except Exception as e:
+        print("OpenAI API error:", str(e))
+        return jsonify({"error": {"message": str(e)}}), 500
 
 
 @app.route('/api/hunter', methods=['GET'])

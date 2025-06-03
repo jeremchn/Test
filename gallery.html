@@ -950,11 +950,11 @@ async function searchSimilarCompanies(companyWebsite) {
         (context ? context + "\n\n" : "") +
         `You are a B2B business development assistant.
 
-        I am looking for 30 real potential client companies that are similar to the company with the website: ${companyWebsite}. If the website is not available or invalid, please use the company name instead.
+        I am looking for 5 real potential client companies that are similar to the company with the website: ${companyWebsite}. If the website is not available or invalid, please use the company name instead.
 
         Use the website or company name, along with the following context to understand the company's profile and needs: ${context || "No additional context provided"}.
 
-        Please research and return a list of 30 real companies, filling out the following information for each:
+        Please research and return a list of 5 real companies, filling out the following information for each:
 
         - Company Name
         - Domain
@@ -989,7 +989,7 @@ async function searchSimilarCompanies(companyWebsite) {
                     { role: "system", content: "You are an assistant that helps find similar companies." },
                     { role: "user", content: userMessage }
                 ],
-                max_tokens: 4096,
+                max_tokens: 1000,
                 temperature: 0.7
             })
         });
