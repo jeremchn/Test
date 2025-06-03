@@ -956,7 +956,7 @@ async function searchSimilarCompanies(companyWebsite) {
 
         Please research and return a list of 5 real companies, filling out the following information for each:
 
-        Company Name|Domain|Industry|Location|Headcount|LinkedIn URL|Description|Company Type|Keywords|Technologies|Ice breaker
+        Company Name|Domain|Industry|Location|Headcount|Linkedin|Description|Company Type|Keywords|Technologies|Ice breaker
 
         Format the output as a valid CSV table using the pipe character "|" as the column separator. The first row must contain the headers exactly as above. Do NOT include any separator lines, Markdown, or extra formatting. Do NOT use links or Markdown in any cell, only plain text or URLs. Do NOT add explanations or comments. Only output the CSV table.
 
@@ -996,7 +996,7 @@ async function searchSimilarCompanies(companyWebsite) {
         const data = await response.json();
         console.log("API Data:", data);
         console.log("RAW CSV from OpenAI:\n", data.choices[0].message.content); // <-- Ajouté ici
-        
+
         let csvContent = data.choices[0].message.content.trim();
 
         // Supprime les lignes de séparation
@@ -1115,7 +1115,9 @@ async function searchSimilarCompanies(companyWebsite) {
         if (!companiesCsv || companiesCsv.length === 0 || !companiesCsv[0]["Company Name"]) {
             noResults.style.display = "block";
             console.log("No similar companies found.");
-        } 
+        } else {
+            noResults.style.display = "none";
+        }
         // Appel pour les conseils (Advices)
         const advicePrompt =
             (context ? context + "\n\n" : "") +
